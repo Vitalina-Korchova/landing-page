@@ -58,39 +58,7 @@ export default function HeroPage() {
             <HiOutlineArrowNarrowDown />
           </button>
         </div>
-        <div className="list-companies-wrapper">
-          <div className="list-companies">
-            <div>
-              <FaSatelliteDish />
-              NovaLink
-            </div>
-            <div>
-              <FaChartLine />
-              Finora Capital
-            </div>
-            <div>
-              <FaExchangeAlt />
-              TradeNova Exchange
-            </div>
-            <div>
-              <FaUniversity />
-              EuroTrust Bank
-            </div>
-            <div>
-              <FaChartPie />
-              LedgerLogic
-            </div>
-            <div>
-              <FaNewspaper />
-              MacroPulse
-            </div>
-            <div>
-              <FaBriefcase />
-              Investora
-            </div>
-          </div>
-          <div className="fade"></div>
-        </div>
+        <div className="list-companies"></div>
       </div>
     </>
   );

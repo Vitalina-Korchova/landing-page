@@ -162,6 +162,8 @@ body {
   }
   button {
     z-index: 5;
+    display: flex;
+    align-items: center;
     position: relative;
     background: #8547f6;
     background: linear-gradient(
@@ -171,60 +173,28 @@ body {
     );
     color: white;
     font-size: 40px;
-    padding: 10px 25px;
+    padding: 25px;
     border: 1px solid #ffffff;
     border-radius: 50%;
-    height: 15vh;
     cursor: pointer;
   }
 
-  .list-companies-wrapper {
+  .list-companies {
+    display: flex;
+    flex-direction: row;
     margin: 50px 70px;
-    z-index: 5;
-    overflow: hidden;
-    position: relative;
-    white-space: nowrap;
-
-    .list-companies {
+    transition-timing-function: linear !important;
+    gap: 50px;
+    div {
       display: flex;
       flex-direction: row;
-      white-space: nowrap;
-      gap: 50px;
-      width: fit-content;
-      animation: loop 10s linear infinite;
 
-      div {
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-        font-size: 30px;
-        font-family: $font-family-secondary;
-        font-weight: 500;
-        letter-spacing: -1px;
-      }
-
-      .fade {
-        width: 100%;
-        position: absolute;
-        background: linear-gradient(
-          90deg,
-          #000,
-          transparent 30%,
-          transparent 90%,
-          #000
-        );
-        inset: 0;
-      }
+      align-items: center;
+      gap: 5px;
+      font-size: 30px;
+      font-family: $font-family-secondary;
+      font-weight: 500;
+      letter-spacing: -1px;
     }
-  }
-}
-
-// animations
-@keyframes loop {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
   }
 }
