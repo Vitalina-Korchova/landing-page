@@ -1,0 +1,10 @@
+@use "partials/hero-page";
+@use "partials/security-section.scss";
+@use "partials/variables" as *;
+
+body {
+  margin: 0;
+  background-color: $background-color;
+  font-family: $font-family-main;
+  color: $font-color;
+}

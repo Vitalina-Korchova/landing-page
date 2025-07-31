@@ -1,37 +1,83 @@
-$background-color: #070322;
-$font-color: white;
-$font-family-main: "Clash Display", sans-serif;
-$font-family-secondary: "Satoshi", sans-serif;
-
-body {
-  margin: 0;
-  background-color: $background-color;
-  font-family: $font-family-main;
-  color: $font-color;
-}
+@use "./variables" as *;
 
 .hero-page {
   position: relative;
 
-  .layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  .shine {
-    z-index: 3;
-    height: 30vh;
-  }
+  .back-planet {
+    position: relative;
 
-  .beams {
-    z-index: 2;
-    height: 65vh;
-  }
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .shine {
+      z-index: 5;
+      height: 30vh;
+    }
 
-  .vector {
-    z-index: 1;
-    height: 110vh;
+    .beams {
+      z-index: 5;
+      height: 65vh;
+    }
+
+    .radial-circle {
+      position: absolute;
+      top: 180px;
+      left: 52%;
+      transform: translateX(-50%);
+      width: 420px;
+      height: 340px;
+      background: rgba(115, 5, 255, 0.55);
+      border-radius: 50%;
+      filter: blur(60px);
+      z-index: 1;
+    }
+
+    .radial-circle-white {
+      position: absolute;
+      top: 370px;
+      left: 54%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.881);
+      border-radius: 50%;
+      filter: blur(20px);
+      z-index: 2;
+    }
+
+    .white-bottom {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      height: 60vh;
+      border-radius: 0 0 50% 50%/0 0 100% 100%;
+      background: #ffffff;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      box-shadow: 0px 12px 17px 7px rgba(115, 5, 255, 0.55);
+      -webkit-box-shadow: 0px 12px 17px 7px rgba(115, 5, 255, 0.55);
+      -moz-box-shadow: 0px 12px 17px 7px rgba(115, 5, 255, 0.55);
+    }
+
+    .planet {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 4;
+      height: 60vh;
+      background-color: $background-color;
+      border-radius: 0 0 50% 50%/0 0 100% 100%;
+    }
   }
 
   .logo {
@@ -183,18 +229,49 @@ body {
     display: flex;
     flex-direction: row;
     margin: 50px 70px;
-    transition-timing-function: linear !important;
-    gap: 50px;
-    div {
-      display: flex;
-      flex-direction: row;
+    position: relative;
 
-      align-items: center;
-      gap: 5px;
-      font-size: 30px;
-      font-family: $font-family-secondary;
-      font-weight: 500;
-      letter-spacing: -1px;
+    &::before {
+      background: linear-gradient(
+        to right,
+        rgb(7, 3, 34) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 18%;
+      left: 0;
+      z-index: 2;
+    }
+
+    &::after {
+      background: linear-gradient(
+        to left,
+        rgb(7, 3, 34) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 18%;
+      right: 0;
+
+      z-index: 2;
+    }
+
+    .list-companies-inner {
+      div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        margin: 0 8px;
+        font-size: 30px;
+        font-family: $font-family-secondary;
+        font-weight: 500;
+        letter-spacing: -1px;
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+import Marquee from "react-fast-marquee";
 import {
   FaBriefcase,
   FaChartLine,
@@ -13,10 +14,14 @@ export default function HeroPage() {
   return (
     <>
       <div className="hero-page">
-        <img src="./shine.png " className="layer shine " />
-        <img src="./beams.png " className="layer beams " />
-        <img src="./vector.png " className="layer vector" />
-
+        <div className="back-planet">
+          <img src="./shine.png " className="layer shine " />
+          <img src="./beams.png " className="layer beams " />
+          <div className="radial-circle"></div>
+          <div className="radial-circle-white"></div>
+          <div className="white-bottom"></div>
+          <div className="planet"></div>
+        </div>
         <nav className="navbar">
           <div className="logo">
             <img className="logo-icon" src="./logo.png" alt="" />
@@ -58,7 +63,38 @@ export default function HeroPage() {
             <HiOutlineArrowNarrowDown />
           </button>
         </div>
-        <div className="list-companies"></div>
+        <div className="list-companies">
+          <Marquee className="list-companies-inner ">
+            <div>
+              <FaSatelliteDish />
+              NovaLink
+            </div>
+            <div>
+              <FaChartLine />
+              Finora Capital
+            </div>
+            <div>
+              <FaExchangeAlt />
+              TradeNova Exchange
+            </div>
+            <div>
+              <FaUniversity />
+              EuroTrust Bank
+            </div>
+            <div>
+              <FaChartPie />
+              LedgerLogic
+            </div>
+            <div>
+              <FaNewspaper />
+              MacroPulse
+            </div>
+            <div>
+              <FaBriefcase />
+              Investora
+            </div>
+          </Marquee>
+        </div>
       </div>
     </>
   );
