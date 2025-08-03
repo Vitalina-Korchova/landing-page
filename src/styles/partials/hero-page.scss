@@ -37,7 +37,7 @@
 
     .radial-circle-white {
       position: absolute;
-      top: 370px;
+      top: 360px;
       left: 54%;
       transform: translateX(-50%);
       width: 300px;
@@ -228,7 +228,7 @@
   .list-companies {
     display: flex;
     flex-direction: row;
-    margin: 50px 70px;
+    margin: 70px 70px;
     position: relative;
 
     &::before {
