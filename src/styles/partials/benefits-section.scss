@@ -22,18 +22,23 @@
   }
 
   .block-section {
+    width: 100%;
+    background-color: transparent;
+    height: 720px;
     position: relative;
 
-    .block-lines-wrapper {
-      margin: 0 30px;
+    .block-lines {
+      width: 76%;
+      display: flex;
+      margin: auto;
+      height: 400px;
+      background-color: transparent;
+      position: relative;
 
-      .block-lines {
-        display: flex;
-        margin: auto;
-        background-color: transparent;
+      .block-lines-top {
         width: 100%;
-        max-width: 800px;
-        height: 20vh;
+        background-color: transparent;
+        height: 120px;
         border-top-right-radius: 70px;
         border-top-left-radius: 70px;
         border-top: 1px solid white;
@@ -57,85 +62,120 @@
           align-items: center;
           justify-content: center;
           border-radius: 50%;
+          z-index: 2;
         }
+      }
 
-        .long-line {
-          display: flex;
-          margin: auto;
-          width: 1px;
-          height: 380px;
-          background-color: white;
-        }
+      .block-long-line {
+        z-index: 1;
+        position: absolute;
+        left: 50%;
+        width: 1px;
+        background-color: white;
+        height: 440px;
       }
     }
 
-    .block-for-circle-cards {
-      display: flex;
-      margin: auto;
-      flex-direction: column;
-      gap: 50%;
-      background-color: transparent;
+    .block-cards {
+      position: absolute;
+      top: 120px;
       width: 100%;
-      max-width: 859px;
-      height: 40vh;
-      position: relative;
-      background-color: transparent;
+      background-color: plum;
+      height: 600px;
 
-      > div:first-child {
+      .block-icons {
+        width: 76%;
+        background-color: blue;
+        height: 320px;
         display: flex;
-        width: 100%;
-        justify-content: space-between;
+        margin: auto;
+        flex-direction: column;
+        gap: 90%;
+        position: relative;
 
-        .circle-develop,
-        .circle-technologies {
-          background: #8547f6;
-          background: linear-gradient(
-            180deg,
-            rgba(133, 71, 246, 1) 0%,
-            rgba(188, 152, 255, 1) 100%
-          );
-          font-size: 25px;
-          padding: 15px;
+        > div:first-child {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          height: 30px;
-          width: 30px;
-          z-index: 2;
-          position: relative;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .circle-develop {
+            background: #8547f6;
+            background: linear-gradient(
+              180deg,
+              rgba(133, 71, 246, 1) 0%,
+              rgba(188, 152, 255, 1) 100%
+            );
+            font-size: 25px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            z-index: 2;
+            position: absolute;
+            left: -30px;
+          }
+          .circle-technologies {
+            background: #8547f6;
+            background: linear-gradient(
+              180deg,
+              rgba(133, 71, 246, 1) 0%,
+              rgba(188, 152, 255, 1) 100%
+            );
+            font-size: 25px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            z-index: 2;
+            position: absolute;
+            right: -30px;
+          }
+
+          .card-develop,
+          .card-technologies {
+            width: 300px;
+            height: 200px;
+            background-color: #8547f6;
+          }
         }
 
-        .container-descr-develop {
-          z-index: 1;
-          position: absolute;
-          top: 30px;
-          left: -99px;
-          background-color: aqua;
-          width: 270px;
-          height: 200px;
+        > div:last-child {
+          display: flex;
+          margin: auto;
+
+          .circle-goals {
+            background: #8547f6;
+            background: linear-gradient(
+              180deg,
+              rgba(133, 71, 246, 1) 0%,
+              rgba(188, 152, 255, 1) 100%
+            );
+            font-size: 25px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            z-index: 2;
+          }
         }
       }
 
-      > div:last-child {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        .circle-goals {
-          background: #8547f6;
-          background: linear-gradient(
-            180deg,
-            rgba(133, 71, 246, 1) 0%,
-            rgba(188, 152, 255, 1) 100%
-          );
-          font-size: 25px;
-          padding: 15px;
+      .block-single-card {
+        .bottom-card-goals {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          height: 30px;
-          width: 30px;
+          margin: auto;
+          width: 250px;
+          height: 270px;
+          background-color: #8547f6;
         }
       }
     }
