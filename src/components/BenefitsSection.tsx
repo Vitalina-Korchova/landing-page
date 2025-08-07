@@ -21,6 +21,10 @@ export default function BenefitsSection() {
             <div className="block-long-line"></div>
           </div>
           <div className="block-cards">
+            <div className="block-2-cards">
+              <div></div>
+              <div></div>
+            </div>
             <div className="block-icons">
               <div>
                 <div className="circle-develop">
