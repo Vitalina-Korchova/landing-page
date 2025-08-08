@@ -2,6 +2,7 @@ import { FaLayerGroup } from "react-icons/fa";
 import { FaRegLightbulb } from "react-icons/fa";
 import { BsRocketTakeoffFill } from "react-icons/bs";
 import { MdOutlineWebhook } from "react-icons/md";
+import { PiStarFourFill } from "react-icons/pi";
 
 export default function BenefitsSection() {
   return (
@@ -22,8 +23,26 @@ export default function BenefitsSection() {
           </div>
           <div className="block-cards">
             <div className="block-2-cards">
-              <div></div>
-              <div></div>
+              <div className="block-card-inner">
+                <div className="stars">
+                  <PiStarFourFill />
+                  <PiStarFourFill />
+                </div>
+                <span>Developing tailored solutions</span>
+                <span>
+                  Next, our team of experts develops tailored solutions.
+                </span>
+              </div>
+              <div className="block-card-inner">
+                <div className="stars">
+                  <PiStarFourFill />
+                  <PiStarFourFill />
+                </div>
+                <span>Implementing Technology</span>
+                <span>
+                  We leverage cutting-edge technology impolement seamlessly.
+                </span>
+              </div>
             </div>
             <div className="block-icons">
               <div>
@@ -43,12 +62,25 @@ export default function BenefitsSection() {
               </div>
             </div>
             <div className="block-single-card">
-              <div className="bottom-card-goals"></div>
+              <div className="bottom-card-goals">
+                <div className="stars">
+                  <PiStarFourFill />
+                  <PiStarFourFill />
+                </div>
+                <span>Understanding Your Business Goals</span>
+                <span>
+                  We start by gaining a deep understanding of your business
+                  goals. We take the time to learn about your unique vision,
+                  challenges, and objectives. This deep understanding allows us
+                  to create tailored solutions that align perfectly with your
+                  goals, ensuring maximum impact and success.
+                </span>
+              </div>
             </div>
           </div>
-          {/* <div className="oval-left-shadow"></div>
-          <div className="oval-right-shadow"></div> */}
         </div>
+        <div className="oval-left-shadow"></div>
+        <div className="oval-right-shadow"></div>
       </div>
     </>
   );

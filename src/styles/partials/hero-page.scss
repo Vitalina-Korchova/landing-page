@@ -24,7 +24,7 @@
 
     .radial-circle {
       position: absolute;
-      top: 180px;
+      top: 300px;
       left: 52%;
       transform: translateX(-50%);
       width: 420px;
@@ -37,7 +37,7 @@
 
     .radial-circle-white {
       position: absolute;
-      top: 360px;
+      top: 480px;
       left: 54%;
       transform: translateX(-50%);
       width: 300px;
@@ -54,7 +54,7 @@
       left: 0;
       width: 100%;
       z-index: 3;
-      height: 60vh;
+      height: 500px;
       border-radius: 0 0 50% 50%/0 0 100% 100%;
       background: #ffffff;
       background: linear-gradient(
@@ -74,7 +74,7 @@
       left: 0;
       width: 100%;
       z-index: 4;
-      height: 60vh;
+      height: 500px;
       background-color: $background-color;
       border-radius: 0 0 50% 50%/0 0 100% 100%;
     }
@@ -184,7 +184,7 @@
     text-align: center;
     flex-direction: column;
     font-size: 80px;
-    margin: 40px auto 30px;
+    margin: 70px;
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 1) 7%,
@@ -205,6 +205,7 @@
   .btn-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
   }
   button {
     z-index: 5;
@@ -228,7 +229,7 @@
   .list-companies {
     display: flex;
     flex-direction: row;
-    margin: 70px 70px;
+    margin: 90px 70px;
     position: relative;
 
     &::before {
@@ -256,7 +257,6 @@
       position: absolute;
       width: 18%;
       right: 0;
-
       z-index: 2;
     }
 
