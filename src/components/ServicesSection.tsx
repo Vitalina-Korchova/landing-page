@@ -104,9 +104,10 @@ export default function ServicesSection() {
                     {isBack ? (
                       <div className="card-back"></div>
                     ) : (
-                      <div className={`${card.styleArt} card-front`}>
+                      <div className="card-front">
                         <span>{card.title}</span>
                         <span>{card.description}</span>
+                        <div className={`${card.styleArt}`}></div>
                       </div>
                     )}
                   </div>

@@ -110,18 +110,194 @@
             -moz-box-shadow: 0px 6px 21px 2px rgba(0, 0, 0, 0.75);
             display: flex;
             flex-direction: column;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
 
-            > span:first-child {
+            > span:nth-child(1) {
               font-size: 22px;
               font-weight: 500;
               padding: 30px 25px;
             }
-            > span:last-child {
+            > span:nth-child(2) {
               font-size: 15px;
               font-weight: 500;
               padding: 0 130px 0 25px;
               font-family: $font-family-secondary;
               font-weight: 100;
+            }
+
+            .art1,
+            .art2,
+            .art3,
+            .art4,
+            .art5,
+            .art6 {
+              position: absolute;
+              bottom: -50px;
+              right: -90px;
+              width: 250px;
+              height: 280px;
+              background-color: white;
+              aspect-ratio: 1;
+            }
+            .art1 {
+              clip-path: shape(
+                from 83.99% 39.31%,
+                curve to 78.96% 57.46% with 84.71% 50%,
+                curve to 70.68% 77.34% with 73.2% 64.91%,
+                curve to 56.79% 85.83% with 68.16% 89.77%,
+                curve to 37.95% 77.21% with 45.42% 81.88%,
+                curve to 19.4% 67.38% with 30.48% 72.53%,
+                curve to 10.56% 50.65% with 8.33% 62.24%,
+                curve to 22.13% 33.84% with 12.79% 39.07%,
+                curve to 37.84% 19.17% with 31.47% 28.61%,
+                curve to 56.71% 8.83% with 44.21% 9.73%,
+                curve to 76.24% 18.28% with 69.21% 7.93%,
+                curve to 83.99% 39.31% with 83.26% 28.63%
+              );
+            }
+
+            .art2 {
+              clip-path: shape(
+                from 81.24% 30.27%,
+                curve to 78.57% 65.11% with 89.7% 50%,
+                curve to 47.28% 84.93% with 67.45% 80.22%,
+                curve to 19.55% 69.82% with 27.12% 89.64%,
+                curve to 21.9% 34.24% with 11.99% 50%,
+                curve to 52.29% 14.51% with 31.8% 18.48%,
+                curve to 81.24% 30.27% with 72.79% 10.53%
+              );
+            }
+
+            .art3 {
+              clip-path: shape(
+                from 50.58% 93.38%,
+                curve to 40.47% 87.41% with 44.86% 90.7%,
+                curve to 29.04% 85.5% with 36.08% 84.11%,
+                curve to 20.37% 80.57% with 22% 86.89%,
+                curve to 16.79% 69.51% with 18.74% 74.24%,
+                curve to 9.56% 60.52% with 14.83% 64.78%,
+                curve to 5.61% 50.41% with 4.28% 56.26%,
+                curve to 11.21% 40.24% with 6.93% 44.56%,
+                curve to 15.01% 29.5% with 15.5% 35.92%,
+                curve to 17.61% 17.65% with 14.53% 23.07%,
+                curve to 26.85% 10.9% with 20.7% 12.23%,
+                curve to 38.44% 7.44% with 33% 9.57%,
+                curve to 49.56% 6.91% with 43.88% 5.31%,
+                curve to 61.13% 8.41% with 55.24% 8.52%,
+                curve to 71.53% 11.99% with 67.01% 8.31%,
+                curve to 77.91% 21.29% with 76.05% 15.68%,
+                curve to 81.81% 31.34% with 79.77% 26.91%,
+                curve to 86.54% 40.2% with 83.85% 35.77%,
+                curve to 93.92% 50.39% with 89.22% 44.63%,
+                curve to 95.39% 61.67% with 98.62% 56.14%,
+                curve to 89.16% 72.33% with 92.16% 67.2%,
+                curve to 80.76% 80.07% with 86.16% 77.45%,
+                curve to 70.03% 83.83% with 75.35% 82.69%,
+                curve to 60.5% 90.51% with 64.7% 84.97%,
+                curve to 50.58% 93.38% with 56.31% 96.05%
+              );
+            }
+
+            .art4 {
+              clip-path: shape(
+                from 57.18% 20.47%,
+                curve to 62.07% 34.53% with 62.4% 27.44%,
+                curve to 75.6% 42.42% with 61.75% 41.63%,
+                curve to 80.19% 49.59% with 89.46% 43.21%,
+                curve to 67.17% 58.96% with 70.93% 55.98%,
+                curve to 64.32% 74.23% with 63.42% 61.94%,
+                curve to 56.75% 84.34% with 65.23% 86.53%,
+                curve to 45.38% 72.89% with 48.27% 82.15%,
+                curve to 31.91% 67.04% with 42.5% 63.64%,
+                curve to 13.95% 63.96% with 21.32% 70.45%,
+                curve to 12.24% 49.15% with 6.58% 57.48%,
+                curve to 20.21% 33.19% with 17.89% 40.83%,
+                curve to 30.9% 24.92% with 22.52% 25.56%,
+                curve to 45.62% 18.89% with 39.28% 24.28%,
+                curve to 57.18% 20.47% with 51.97% 13.5%
+              );
+            }
+
+            .art5 {
+              clip-path: shape(
+                from 9.65% 41.14%,
+                curve to 17.99% 36.6% with 14.14% 38.35%,
+                curve to 18.35% 28.41% with 21.85% 34.85%,
+                curve to 20.69% 22.55% with 14.86% 21.97%,
+                curve to 29.6% 22.07% with 26.52% 23.12%,
+                curve to 33.49% 14.58% with 32.68% 21.02%,
+                curve to 38.49% 8.91% with 34.29% 8.14%,
+                curve to 46.34% 13.57% with 42.68% 9.68%,
+                curve to 53.8% 12.81% with 50% 17.45%,
+                curve to 62.05% 7.09% with 57.59% 8.17%,
+                curve to 68.92% 10.16% with 66.51% 6.01%,
+                curve to 74.91% 15.85% with 71.33% 14.3%,
+                curve to 79.4% 21.61% with 78.49% 17.39%,
+                curve to 84.18% 27.68% with 80.32% 25.82%,
+                curve to 88.29% 33.51% with 88.03% 29.54%,
+                curve to 85.68% 41.52% with 88.54% 37.48%,
+                curve to 82.3% 48.49% with 82.82% 45.55%,
+                curve to 83.3% 54.69% with 81.77% 51.43%,
+                curve to 89.78% 63.53% with 84.83% 57.95%,
+                curve to 90.67% 71.65% with 94.73% 69.12%,
+                curve to 84.1% 77.19% with 86.62% 74.17%,
+                curve to 77.01% 80.54% with 81.58% 80.2%,
+                curve to 68.48% 80.52% with 72.44% 80.88%,
+                curve to 63.27% 86.85% with 64.52% 80.15%,
+                curve to 57.56% 89.02% with 62.02% 93.55%,
+                curve to 49.52% 89.8% with 53.1% 84.49%,
+                curve to 41.82% 94.82% with 45.94% 95.12%,
+                curve to 34.49% 91.72% with 37.71% 94.53%,
+                curve to 28.47% 86.19% with 31.27% 88.9%,
+                curve to 23.31% 80.63% with 25.67% 83.48%,
+                curve to 21.67% 73% with 20.94% 77.78%,
+                curve to 14.9% 68.21% with 22.41% 68.21%,
+                curve to 7.32% 63.98% with 7.4% 68.21%,
+                curve to 6.26% 55.88% with 7.24% 59.76%,
+                curve to 5.22% 47.97% with 5.28% 52.01%,
+                curve to 9.65% 41.14% with 5.16% 43.93%
+              );
+            }
+
+            .art6 {
+              clip-path: shape(
+                from 38.09% 22.77%,
+                curve to 47.34% 20.3% with 41.53% 17.02%,
+                curve to 61.75% 17.6% with 53.14% 23.58%,
+                curve to 72.07% 20.53% with 70.37% 11.62%,
+                curve to 75.51% 34.84% with 73.77% 29.43%,
+                curve to 85.19% 45.68% with 77.24% 40.25%,
+                curve to 89.23% 57.93% with 93.13% 51.12%,
+                curve to 77.53% 66.85% with 85.34% 64.75%,
+                curve to 68.38% 77.73% with 69.73% 68.95%,
+                curve to 60.04% 91.25% with 67.02% 86.51%,
+                curve to 45.7% 91.64% with 53.06% 95.99%,
+                curve to 31.3% 84.8% with 38.34% 87.3%,
+                curve to 21.83% 75.09% with 24.26% 82.31%,
+                curve to 14.37% 62.19% with 19.39% 67.88%,
+                curve to 11.24% 49.31% with 9.36% 56.51%,
+                curve to 19.81% 38.35% with 13.12% 42.11%,
+                curve to 30.57% 31.56% with 26.5% 34.6%,
+                curve to 38.09% 22.77% with 34.64% 28.53%
+              );
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              inset: 0;
+              background: conic-gradient(
+                from 202deg at 50% 50%,
+                rgba(0, 0, 0, 0) 67%,
+                rgba(73, 53, 130, 1) 76%,
+                rgba(71, 47, 140, 0.28) 92%
+              );
+              opacity: 20%;
+              border-radius: 24px;
+              pointer-events: none;
+              z-index: 1;
             }
           }
 
