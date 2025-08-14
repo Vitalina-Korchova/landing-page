@@ -1,0 +1,177 @@
+@use "./variables" as *;
+.community-section {
+  margin: 0 70px 100px 70px;
+
+  position: relative;
+
+  .circles {
+    padding: 5px;
+    position: relative;
+
+    .circle-1 {
+      display: flex;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      width: 1000px;
+      height: 1000px;
+      border: 3px solid #af04ff;
+      border-radius: 50%;
+      box-shadow: 0px -6px 21px 0px rgba(253, 253, 253, 0.3);
+      -webkit-box-shadow: 0px -6px 21px 0px rgba(253, 253, 253, 0.3);
+      -moz-box-shadow: 0px -6px 21px 0px rgba(253, 253, 253, 0.3);
+      position: relative;
+
+      .circle-2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 800px;
+        height: 800px;
+        border: 3px solid #894ef67d;
+        border-radius: 50%;
+
+        .circle-3 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 3px;
+          width: 600px;
+          height: 600px;
+          border: 3px solid #894ef67d;
+          border-radius: 50%;
+          color: white;
+
+          span {
+            font-size: 55px;
+            font-weight: 500;
+          }
+          .btn {
+            margin-top: 20px;
+            cursor: pointer;
+            padding: 14px 50px;
+            font-size: 18px;
+            border-radius: 54px;
+            background: linear-gradient(0deg, #47308c, #140f2a, #47308c66);
+            border: 1px solid #77679f;
+          }
+        }
+      }
+
+      &::before {
+        position: absolute;
+        bottom: -10px;
+        width: 120%;
+        height: 300px;
+        background: #070322;
+        background: linear-gradient(
+          180deg,
+          rgba(7, 3, 34, 0.05) 0%,
+          rgba(7, 3, 34, 0.66) 10%,
+          rgba(7, 3, 34, 1) 24%,
+          rgba(7, 3, 34, 1) 95%
+        );
+        content: "";
+      }
+
+      .differenet-elements {
+        .blob {
+          display: flex;
+          flex-direction: column;
+          gap: 1px;
+          align-items: center;
+          > div:first-child {
+            border-radius: 50%;
+            background-color: white;
+            width: 40px;
+            height: 40px;
+          }
+          > div:last-child {
+            border-radius: 50%;
+            background-color: white;
+            width: 10px;
+            height: 10px;
+          }
+        }
+
+        .blob-el-1 {
+          position: absolute;
+          top: 1%;
+          left: 30%;
+        }
+
+        .blob-el-2 {
+          position: absolute;
+          top: 30%;
+          left: 73%;
+          > div:nth-child(1),
+          > div:nth-child(2) {
+            background-color: rgba(255, 255, 255, 0.733);
+          }
+        }
+        .blob-el-3 {
+          position: absolute;
+          top: 55%;
+          left: 85%;
+          > div:nth-child(1),
+          > div:nth-child(2) {
+            background-color: rgba(255, 255, 255, 0.511);
+          }
+        }
+        .blob-el-4 {
+          position: absolute;
+          top: 65%;
+          left: 15%;
+          > div:nth-child(1),
+          > div:nth-child(2) {
+            background-color: rgba(255, 255, 255, 0.203);
+          }
+        }
+      }
+
+      .comments {
+        position: absolute;
+        top: 150px;
+        left: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 260px;
+        height: 70px;
+        padding: 0 10px;
+        border-radius: 99px;
+        background: #ffffff;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(133, 71, 246, 0.52) 50%,
+          rgba(51, 42, 85, 1) 100%
+        );
+
+        > div:first-child {
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+        }
+        > div:last-child {
+          display: flex;
+          flex-direction: column;
+          gap: 1px;
+          font-size: 14px;
+          font-family: $font-family-secondary;
+          > span:nth-child(1) {
+            font-weight: 500;
+          }
+          > span:nth-child(2) {
+            color: rgb(186, 186, 186);
+          }
+        }
+      }
+    }
+  }
+}
