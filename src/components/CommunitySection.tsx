@@ -35,7 +35,7 @@ export default function CommunitySection() {
                 </div>
                 <div>
                   <span>That was amazing! Great job!</span>
-                  <span>Louis Patridge</span>
+                  <span>Isla Beaumont</span>
                 </div>
               </div>
               <div className="comments comment-2">
@@ -44,7 +44,7 @@ export default function CommunitySection() {
                 </div>
                 <div>
                   <span>Highly Recommended!</span>
-                  <span>Carlos Sainz</span>
+                  <span>Evelyn Harrington</span>
                 </div>
               </div>
               <div className="comments comment-3">
@@ -53,7 +53,7 @@ export default function CommunitySection() {
                 </div>
                 <div>
                   <span>The results are outstanding!</span>
-                  <span>Gracie Abrams</span>
+                  <span>Clara Whitmore</span>
                 </div>
               </div>
               <div className="comments comment-4">
@@ -62,7 +62,7 @@ export default function CommunitySection() {
                 </div>
                 <div>
                   <span>Nice work, love it!🔥</span>
-                  <span>Byeon Wo Soek</span>
+                  <span>Carlos Sainz</span>
                 </div>
               </div>
             </div>
