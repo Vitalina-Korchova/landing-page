@@ -15,8 +15,8 @@ export default function HeroPage() {
     <>
       <div className="hero-page">
         <div className="back-planet">
-          <img src="./shine.png " className="layer shine " />
-          <img src="./beams.png " className="layer beams " />
+          <img src="./shine.svg " className="layer shine " />
+          <img src="./beams.svg" className="layer beams " />
           <div className="radial-circle"></div>
           <div className="radial-circle-white"></div>
           <div className="white-bottom"></div>
@@ -24,7 +24,7 @@ export default function HeroPage() {
         </div>
         <nav className="navbar">
           <div className="logo">
-            <img className="logo-icon" src="./logo.png" alt="" />
+            <img className="logo-icon" src="./logo.svg" alt="" />
             <span>SpaceV</span>
           </div>
           <div className="nav-link">
