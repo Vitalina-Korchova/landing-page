@@ -1,5 +1,6 @@
 import BenefitsSection from "./components/BenefitsSection";
 import CommunitySection from "./components/CommunitySection";
+import FaqSection from "./components/FaqSection";
 import HeroPage from "./components/HeroPage";
 import SecuritySection from "./components/SecuritySection";
 import ServicesSection from "./components/ServicesSection";
@@ -14,6 +15,7 @@ function App() {
       <ServicesSection />
       <CommunitySection />
       <TestimonialsSection />
+      <FaqSection />
     </>
   );
 }

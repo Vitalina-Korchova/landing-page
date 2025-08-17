@@ -1,0 +1,107 @@
+@use "./variables" as *;
+
+.faq-section {
+  margin: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .text {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 50px;
+
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 7%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .accordion-wrapper {
+    .star-down {
+      margin-left: auto;
+      transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+      color: white;
+    }
+
+    .szh-accordion {
+      &__item {
+        border: 1px solid #ffffff22;
+        margin-bottom: 10px;
+        border-radius: 24px;
+        position: relative;
+
+        &::after {
+          border-top-right-radius: 24px;
+          border-bottom-right-radius: 24px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          content: "";
+          width: 35%;
+          height: 100%;
+          background: linear-gradient(
+            337deg,
+            rgba(165, 105, 245, 0.5) 5%,
+            rgba(136, 56, 241, 0.25) 23%,
+            rgba(106, 7, 236, 0) 42%
+          );
+          z-index: 1;
+        }
+
+        &-btn {
+          z-index: 2;
+          position: relative;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          margin: 0;
+          padding: 35px;
+          font-size: 25px;
+          font-weight: 500;
+          text-align: left;
+          color: white;
+          background-color: transparent;
+          border: none;
+          font-family: $font-family-main;
+          word-spacing: 5px;
+        }
+
+        &-content {
+          font-size: 16px;
+          padding: 0 20px 10px 25px;
+          transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+          color: #ffffff97;
+          word-spacing: 2px;
+          font-family: $font-family-secondary;
+        }
+
+        &-panel {
+          padding: 1rem;
+        }
+
+        &:hover {
+          border: 1px solid #ffffff6f;
+          border-radius: 24px;
+        }
+        &--expanded {
+          .szh-accordion__item-btn {
+            border-top: 1px solid #ffffff6f;
+
+            border-radius: 24px;
+          }
+          .star-down {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
