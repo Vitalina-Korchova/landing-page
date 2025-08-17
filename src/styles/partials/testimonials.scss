@@ -1,3 +1,4 @@
+@use "./variables" as *;
 .testimonials-section {
   margin: 0 0 70px 0;
   display: flex;
@@ -26,7 +27,7 @@
   .map {
     position: relative;
     background: url("/map.svg") no-repeat center/cover;
-    height: 800px;
+    height: 700px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -46,7 +47,7 @@
         display: flex;
         margin: auto;
         font-size: 18px;
-        background: #444;
+        background: #181431;
         width: 40%;
         height: 70%;
         opacity: 0.7;
@@ -54,12 +55,66 @@
         justify-content: center;
         align-items: center;
         transition: all 0.9s ease;
+        border-radius: 24px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: conic-gradient(
+            from 202deg at 50% 50%,
+            rgba(0, 0, 0, 0) 67%,
+            rgba(73, 53, 130, 1) 76%,
+            rgba(71, 47, 140, 0.28) 92%
+          );
+          opacity: 20%;
+          border-radius: 24px;
+          pointer-events: none;
+          z-index: 1;
+          filter: blur(2px);
+        }
+
+        .slider-inner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 20px;
+          font-family: $font-family-secondary;
+          padding: 0 40px;
+
+          > span:nth-child(1) {
+            font-size: 30px;
+            font-weight: 500;
+          }
+          > span:nth-child(2) {
+            font-size: 14px;
+            font-weight: 100;
+          }
+          > div:nth-child(3) {
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(
+              to right,
+              transparent,
+              rgba(255, 255, 255, 0.8),
+              transparent
+            );
+            border-radius: 50%;
+          }
+          > span:nth-child(4) {
+            font-size: 22px;
+            font-weight: 500;
+          }
+        }
       }
 
       .swiper-slide-active {
         transform: scale(1.1);
-        background: #ff2a2a;
+        background: #181431;
         opacity: 1;
+        border: 1px solid rgba(255, 255, 255, 0.477);
       }
 
       .swiper-pagination-bullet {
@@ -75,6 +130,25 @@
         background: #fff;
         opacity: 1;
         width: 40px;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 50%;
+        background-color: #8447f690;
+        color: white;
+        padding: 5px 12px;
+        box-shadow: 0px 0px 23px -6px rgba(0, 0, 0, 0.67);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        &::after {
+          font-size: 25px;
+        }
+        &:hover {
+          opacity: 1;
+        }
       }
     }
 
