@@ -43,7 +43,7 @@ export default function FaqSection() {
 
   return (
     <>
-      <div className="faq-section">
+      <div className="faq-section" id="faq">
         <div className="text">
           <span>Frequently Asked</span>
           <span>Questions</span>

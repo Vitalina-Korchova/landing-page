@@ -7,7 +7,7 @@ import { PiStarFourFill } from "react-icons/pi";
 export default function BenefitsSection() {
   return (
     <>
-      <div className="benefits-section">
+      <div className="benefits-section" id="benefits">
         <div className="text-section-main">
           <span>Innovative Problem-Solving for</span>
           <span>Your Business Needs</span>

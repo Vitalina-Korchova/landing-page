@@ -1,0 +1,190 @@
+@use "./variables" as *;
+.footer {
+  margin: 110px 0;
+  position: relative;
+
+  .block {
+    height: 150px;
+    background-color: $background-color;
+    z-index: 4;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    > div:nth-child(1) {
+      margin-left: 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      align-items: start;
+
+      .logo {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+
+        span {
+          font-size: 25px;
+          font-weight: 500;
+        }
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-size: 14px;
+          font-family: $font-family-secondary;
+          color: gray;
+        }
+      }
+    }
+
+    > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      > span:first-child {
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      > div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 13px;
+        font-family: $font-family-secondary;
+        color: gray;
+
+        span {
+          cursor: pointer;
+
+          &:hover {
+            color: #8a4ef6;
+          }
+        }
+      }
+    }
+
+    > div:nth-child(3) {
+      margin-right: 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        font-size: 28px;
+        font-weight: 600;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 1) 7%,
+          rgba(255, 255, 255, 0.3) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      > div:nth-child(2) {
+        position: relative;
+
+        input {
+          border-radius: 99px;
+          background-color: transparent;
+          border: 1px solid #77679f;
+          padding: 14px;
+          width: 320px;
+          color: white;
+          position: relative;
+
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            border: 1px solid #8a4ef6;
+          }
+        }
+
+        button {
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 120px;
+          padding: 12px;
+          border-radius: 99px;
+          font-size: 15px;
+          font-weight: 500;
+          border: 1px solid #77679f;
+          background: linear-gradient(0deg, #47308c, #140f2a, #47308c66);
+          color: white;
+          font-family: $font-family-main;
+        }
+      }
+
+      > div:nth-child(3) {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+
+        div {
+          background-color: rgb(171, 171, 171);
+          color: #140f2a;
+          font-size: 22px;
+          padding: 5px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .semicircle {
+    z-index: 3;
+    height: 150px;
+    width: 120%;
+    position: relative;
+    left: -10%;
+    border-radius: 30% 70% 50% 50% / 0% 0% 100% 100%;
+    background-color: $background-color;
+    box-shadow: 0px 12px 65px 15px rgb(69, 37, 124);
+  }
+
+  .purple-blur-circle {
+    width: 48%;
+    height: 90%;
+    background-color: rgba(115, 5, 255, 0.55);
+    z-index: 1;
+    left: 27%;
+    bottom: -30%;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+  }
+
+  .white-blur-circle {
+    width: 28%;
+    height: 10%;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    left: 36%;
+    bottom: -6%;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(25px);
+  }
+}

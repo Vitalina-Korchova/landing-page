@@ -51,7 +51,7 @@ export default function ServicesSection() {
   ];
   return (
     <>
-      <div className="services-section">
+      <div className="services-section" id="services">
         <div className="text">
           <span>Comprehensive Service </span>
           <span> Offerings</span>

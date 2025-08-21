@@ -1,7 +1,7 @@
 export default function CommunitySection() {
   return (
     <>
-      <div className="community-section">
+      <div className="community-section" id="community">
         <div className="circles">
           <div className="circle-1">
             <div className="circle-2">

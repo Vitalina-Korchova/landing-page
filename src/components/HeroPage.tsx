@@ -9,11 +9,12 @@ import {
   FaUniversity,
 } from "react-icons/fa";
 import { HiOutlineArrowNarrowDown } from "react-icons/hi";
+import { Link } from "react-scroll";
 
 export default function HeroPage() {
   return (
     <>
-      <div className="hero-page">
+      <div className="hero-page" id="home">
         <div className="back-planet">
           <img src="./shine.svg " className="layer shine " />
           <img src="./beams.svg" className="layer beams " />
@@ -31,19 +32,29 @@ export default function HeroPage() {
             <div className="nav-links-items">
               <ul>
                 <li>
-                  <a>Home</a>
+                  <Link to="benefits" smooth={true} duration={1600}>
+                    Benefits
+                  </Link>
                 </li>
                 <li>
-                  <a>About</a>
+                  <Link to="services" smooth={true} duration={1600}>
+                    Services
+                  </Link>
                 </li>
                 <li>
-                  <a>Benefits</a>
+                  <Link to="community" smooth={true} duration={1600}>
+                    Community
+                  </Link>
                 </li>
                 <li>
-                  <a>Contact</a>
+                  <Link to="testimonials" smooth={true} duration={1600}>
+                    Testimonials
+                  </Link>
                 </li>
                 <li>
-                  <a>Reviews</a>
+                  <Link to="faq" smooth={true} duration={1600}>
+                    FAQ
+                  </Link>
                 </li>
               </ul>
             </div>
