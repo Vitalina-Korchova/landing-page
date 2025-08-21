@@ -1,7 +1,7 @@
 export default function SecuritySection() {
   return (
     <>
-      <div className="secure-section">
+      <div data-aos="zoom-in" className="secure-section">
         <div className="sec-1">
           <div className="cube-wrapper">
             <div className="cube">

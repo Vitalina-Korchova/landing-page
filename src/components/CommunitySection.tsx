@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 export default function CommunitySection() {
   return (
     <>
@@ -8,28 +10,34 @@ export default function CommunitySection() {
               <div className="circle-3">
                 <span>Join Our </span>
                 <span>Community</span>
-                <div className="btn">Join Us</div>
+
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Join Us
+                </motion.button>
               </div>
             </div>
             <div className="differenet-elements">
-              <div className="blob blob-el-1">
+              <div data-aos="zoom-in" className="blob blob-el-1">
                 <div></div>
                 <div></div>
               </div>
-              <div className="blob blob-el-2">
+              <div data-aos="zoom-in" className="blob blob-el-2">
                 <div></div>
                 <div></div>
               </div>
-              <div className="blob blob-el-3">
+              <div data-aos="zoom-in" className="blob blob-el-3">
                 <div></div>
                 <div></div>
               </div>
-              <div className="blob blob-el-4">
+              <div data-aos="zoom-in" className="blob blob-el-4">
                 <div></div>
                 <div></div>
               </div>
 
-              <div className="comments comment-1">
+              <div data-aos="zoom-in" className="comments comment-1">
                 <div>
                   <img src="./pic1.jpg" alt="coment1" />
                 </div>
@@ -38,7 +46,7 @@ export default function CommunitySection() {
                   <span>Isla Beaumont</span>
                 </div>
               </div>
-              <div className="comments comment-2">
+              <div data-aos="zoom-in" className="comments comment-2">
                 <div>
                   <img src="./pic2.jpg" alt="coment2" />
                 </div>
@@ -47,7 +55,7 @@ export default function CommunitySection() {
                   <span>Evelyn Harrington</span>
                 </div>
               </div>
-              <div className="comments comment-3">
+              <div data-aos="zoom-in" className="comments comment-3">
                 <div>
                   <img src="./pic3.jpg" alt="coment3" />
                 </div>
@@ -56,7 +64,7 @@ export default function CommunitySection() {
                   <span>Clara Whitmore</span>
                 </div>
               </div>
-              <div className="comments comment-4">
+              <div data-aos="zoom-in" className="comments comment-4">
                 <div>
                   <img src="./pic4.jpg" alt="coment4" />
                 </div>

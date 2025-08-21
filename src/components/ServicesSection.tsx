@@ -67,7 +67,7 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        <div className="banner">
+        <div data-aos="zoom-in-up" className="banner">
           <div className="slider-wrapper">
             <div className="btn-left" onClick={rotateSliderLeft}>
               <div>

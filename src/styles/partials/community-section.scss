@@ -47,7 +47,8 @@
             font-size: 55px;
             font-weight: 500;
           }
-          .btn {
+
+          button {
             margin-top: 20px;
             cursor: pointer;
             padding: 14px 50px;
@@ -55,6 +56,8 @@
             border-radius: 54px;
             background: linear-gradient(0deg, #47308c, #140f2a, #47308c66);
             border: 1px solid #77679f;
+            color: white;
+            font-family: $font-family-main;
           }
         }
       }

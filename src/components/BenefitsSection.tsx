@@ -15,14 +15,14 @@ export default function BenefitsSection() {
         <div className="block-section">
           <div className="block-lines">
             <div className="block-lines-top">
-              <div className="circle-center-main">
+              <div data-aos="zoom-in" className="circle-center-main">
                 <FaLayerGroup />
               </div>
             </div>
             <div className="block-long-line"></div>
           </div>
           <div className="block-cards">
-            <div className="block-2-cards">
+            <div data-aos="fade-up" className="block-2-cards">
               <div className="block-card-inner">
                 <div className="stars">
                   <PiStarFourFill />
@@ -46,22 +46,22 @@ export default function BenefitsSection() {
             </div>
             <div className="block-icons">
               <div>
-                <div className="circle-develop">
+                <div data-aos="zoom-in" className="circle-develop">
                   <FaRegLightbulb />
                 </div>
-                <div className="circle-technologies">
+                <div data-aos="zoom-in" className="circle-technologies">
                   <MdOutlineWebhook />
                 </div>
                 <div className="card-develop"></div>
                 <div className="card-technologies"></div>
               </div>
               <div>
-                <div className="circle-goals">
+                <div data-aos="zoom-in" className="circle-goals">
                   <BsRocketTakeoffFill />
                 </div>
               </div>
             </div>
-            <div className="block-single-card">
+            <div data-aos="fade-up" className="block-single-card">
               <div className="bottom-card-goals">
                 <div className="stars">
                   <PiStarFourFill />

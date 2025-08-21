@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { HiOutlineArrowNarrowDown } from "react-icons/hi";
 import { Link } from "react-scroll";
+import { motion } from "motion/react";
 
 export default function HeroPage() {
   return (
@@ -70,9 +71,11 @@ export default function HeroPage() {
         </div>
 
         <div className="btn-wrapper">
-          <button>
-            <HiOutlineArrowNarrowDown />
-          </button>
+          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+            <Link to="benefits" smooth={true} duration={1600}>
+              <HiOutlineArrowNarrowDown />
+            </Link>
+          </motion.button>
         </div>
         <div className="list-companies">
           <Marquee className="list-companies-inner ">

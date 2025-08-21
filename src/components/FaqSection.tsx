@@ -48,7 +48,7 @@ export default function FaqSection() {
           <span>Frequently Asked</span>
           <span>Questions</span>
         </div>
-        <div className="accordion-wrapper">
+        <div data-aos="zoom-out" className="accordion-wrapper">
           <Accordion transition transitionTimeout={250}>
             {items.map(({ header, content }, i) => (
               <AccordionItem header={header} key={i}>

@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -54,15 +54,19 @@ export default function TestimonialsSection() {
           <span>Their Voice</span>
         </div>
         <div className="map">
-          <div className="slider-wrapper">
+          <div data-aos="fade-left" className="slider-wrapper">
             <Swiper
               slidesPerView={"auto"}
               loop={true}
               centeredSlides={true}
               spaceBetween={70}
               navigation={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: true,
+              }}
               pagination={{ clickable: true }}
-              modules={[Navigation, Pagination]}
+              modules={[Navigation, Pagination, Autoplay]}
               className="mySwiper"
             >
               {testimonials.map((item, index) => (
