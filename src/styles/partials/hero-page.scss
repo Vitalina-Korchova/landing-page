@@ -208,24 +208,24 @@
     display: flex;
     justify-content: center;
     margin-top: 100px;
-  }
-  button {
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    position: relative;
-    background: #8547f6;
-    background: linear-gradient(
-      180deg,
-      rgba(133, 71, 246, 1) 0%,
-      rgba(221, 203, 255, 1) 100%
-    );
-    color: white;
-    font-size: 40px;
-    padding: 25px;
-    border: 1px solid #ffffff;
-    border-radius: 50%;
-    cursor: pointer;
+    button {
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: #8547f6;
+      background: linear-gradient(
+        180deg,
+        rgba(133, 71, 246, 1) 0%,
+        rgba(221, 203, 255, 1) 100%
+      );
+      color: white;
+      font-size: 40px;
+      padding: 25px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
   }
 
   .list-companies {

@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 .services-section {
   margin: 200px 70px 20px 70px;
@@ -90,13 +91,22 @@
         width: 320px;
         height: 330px;
         transform-style: preserve-3d;
-        transform: perspective(600px);
-        transform: rotateX(-16deg);
+        transform: perspective(600px) rotateX(-16deg);
+
+        @include desktop {
+          width: 270px;
+          height: 300px;
+        }
 
         .card {
           position: absolute;
           inset: 0 0 0 0;
           border-radius: 25px;
+          transform: rotateY(var(--rotation)) translateZ(350px);
+
+          @include desktop {
+            transform: rotateY(var(--rotation)) translateZ(280px);
+          }
 
           .card-front {
             width: 100%;
@@ -118,6 +128,10 @@
               font-size: 22px;
               font-weight: 500;
               padding: 30px 25px;
+
+              @include desktop {
+                font-size: 20px;
+              }
             }
             > span:nth-child(2) {
               font-size: 15px;
@@ -125,6 +139,10 @@
               padding: 0 130px 0 25px;
               font-family: $font-family-secondary;
               font-weight: 100;
+
+              @include desktop {
+                font-size: 14px;
+              }
             }
 
             .art1,
@@ -140,6 +158,10 @@
               height: 280px;
               background-color: white;
               aspect-ratio: 1;
+
+              @include desktop {
+                right: -110px;
+              }
             }
             .art1 {
               clip-path: shape(
@@ -315,7 +337,7 @@
       .btn-left {
         position: absolute;
         top: 30%;
-        left: 0;
+        left: 3%;
         cursor: pointer;
 
         div {
@@ -350,7 +372,7 @@
       .btn-right {
         position: absolute;
         top: 30%;
-        right: 0;
+        right: 3%;
         cursor: pointer;
 
         div {

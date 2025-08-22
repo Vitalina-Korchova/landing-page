@@ -73,7 +73,7 @@ export default function HeroPage() {
         <div className="btn-wrapper">
           <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             <Link to="benefits" smooth={true} duration={1600}>
-              <HiOutlineArrowNarrowDown />
+              <HiOutlineArrowNarrowDown style={{ display: "block" }} />
             </Link>
           </motion.button>
         </div>

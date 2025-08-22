@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 .benefits-section {
   margin: 100px 70px;
@@ -129,6 +130,10 @@
           font-size: 25px;
           text-align: center;
           padding: 0 18px;
+
+          @include desktop {
+            font-size: 18px;
+          }
         }
         > span:nth-child(3) {
           font-size: 15px;
@@ -136,6 +141,10 @@
           font-family: $font-family-secondary;
           padding: 4px 18px 12px 18px;
           font-weight: 100;
+
+          @include desktop {
+            font-size: 13px;
+          }
         }
       }
     }
@@ -271,6 +280,10 @@
             font-size: 25px;
             text-align: center;
             padding: 0 18px;
+
+            @include desktop {
+              font-size: 18px;
+            }
           }
           > span:nth-child(3) {
             font-size: 15px;
@@ -278,6 +291,10 @@
             font-family: $font-family-secondary;
             padding: 4px 20px 12px 20px;
             font-weight: 100;
+
+            @include desktop {
+              font-size: 13px;
+            }
           }
         }
       }
@@ -308,4 +325,7 @@
     filter: blur(60px);
     z-index: 1;
   }
+}
+
+@media (min-width: 1025px) and (max-width: 1439px) {
 }

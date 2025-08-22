@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useState } from "react";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
@@ -49,6 +50,7 @@ export default function ServicesSection() {
       styleArt: "art6",
     },
   ];
+
   return (
     <>
       <div className="services-section" id="services">
@@ -69,11 +71,16 @@ export default function ServicesSection() {
 
         <div data-aos="zoom-in-up" className="banner">
           <div className="slider-wrapper">
-            <div className="btn-left" onClick={rotateSliderLeft}>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-left"
+              onClick={rotateSliderLeft}
+            >
               <div>
                 <IoIosArrowRoundBack />
               </div>
-            </div>
+            </motion.div>
             <div
               className="slider"
               style={{
@@ -95,11 +102,11 @@ export default function ServicesSection() {
                   <div
                     key={i}
                     className="card"
-                    style={{
-                      transform: `rotateY(${
-                        i * anglePerCard
-                      }deg) translateZ(350px)`,
-                    }}
+                    style={
+                      {
+                        "--rotation": `${i * anglePerCard}deg`,
+                      } as React.CSSProperties
+                    }
                   >
                     {isBack ? (
                       <div className="card-back"></div>
@@ -115,11 +122,16 @@ export default function ServicesSection() {
               })}
             </div>
 
-            <div className="btn-right" onClick={rotateSliderRight}>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-right"
+              onClick={rotateSliderRight}
+            >
               <div>
                 <IoIosArrowRoundForward />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
