@@ -103,9 +103,12 @@
           inset: 0 0 0 0;
           border-radius: 25px;
           transform: rotateY(var(--rotation)) translateZ(350px);
+          box-shadow: 0px 6px 21px 2px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 0px 6px 21px 2px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 6px 21px 2px rgba(0, 0, 0, 0.75);
 
           @include desktop {
-            transform: rotateY(var(--rotation)) translateZ(280px);
+            transform: rotateY(var(--rotation)) translateZ(300px);
           }
 
           .card-front {
@@ -115,9 +118,7 @@
             background-color: #393054;
             border-radius: 24px;
             border: 1px solid #ffffff3e;
-            box-shadow: 0px 6px 21px 2px rgba(0, 0, 0, 0.75);
-            -webkit-box-shadow: 0px 6px 21px 2px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0px 6px 21px 2px rgba(0, 0, 0, 0.75);
+
             display: flex;
             flex-direction: column;
             position: relative;

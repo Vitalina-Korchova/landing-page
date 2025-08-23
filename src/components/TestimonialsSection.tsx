@@ -54,8 +54,9 @@ export default function TestimonialsSection() {
           <span>Their Voice</span>
         </div>
         <div className="map">
-          <div data-aos="fade-left" className="slider-wrapper">
+          <div className="slider-wrapper">
             <Swiper
+              data-aos="fade-left"
               slidesPerView={"auto"}
               loop={true}
               centeredSlides={true}
@@ -67,7 +68,7 @@ export default function TestimonialsSection() {
               }}
               pagination={{ clickable: true }}
               modules={[Navigation, Pagination, Autoplay]}
-              className="mySwiper"
+              className="mySwiper "
             >
               {testimonials.map((item, index) => (
                 <SwiperSlide>

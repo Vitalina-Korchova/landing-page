@@ -1,3 +1,5 @@
+@use "./mixins" as *;
+
 .secure-section {
   position: relative;
   z-index: 5;
@@ -23,14 +25,27 @@
     align-items: center;
     gap: 35px;
 
+    @include tablet {
+      padding: 18px;
+    }
+
     .cube-wrapper {
       padding: 26px;
+
+      @include tablet {
+        padding: 15px;
+      }
 
       .cube {
         width: 100px;
         height: 100px;
         transform-style: preserve-3d;
         transform: rotateX(-30deg) rotateY(35deg) translate(-50%, -50%);
+
+        @include tablet {
+          width: 50px;
+          height: 50px;
+        }
 
         > div {
           position: absolute;
@@ -53,23 +68,52 @@
               inset 0 0 4px rgba(255, 255, 255, 0.2);
             transform-origin: center;
 
+            @include tablet {
+              width: 60px;
+              height: 60px;
+            }
+
             &:nth-child(1) {
               transform: translate3d(0, 0, 50px); // фронт
+
+              @include tablet {
+                transform: translate3d(0, 0, 30px);
+              }
             }
             &:nth-child(2) {
               transform: rotateX(90deg) translate3d(0, 0, 50px); // верх
+
+              @include tablet {
+                transform: rotateX(90deg) translate3d(0, 0, 30px);
+              }
             }
             &:nth-child(3) {
               transform: rotateX(180deg) translate3d(0, 0, 50px); // зад
+
+              @include tablet {
+                transform: rotateX(180deg) translate3d(0, 0, 30px);
+              }
             }
             &:nth-child(4) {
               transform: rotateX(270deg) translate3d(0, 0, 50px); // низ
+
+              @include tablet {
+                transform: rotateX(270deg) translate3d(0, 0, 30px);
+              }
             }
             &:nth-child(5) {
               transform: rotateY(90deg) translate3d(0, 0, 50px); // право
+
+              @include tablet {
+                transform: rotateY(90deg) translate3d(0, 0, 30px);
+              }
             }
             &:nth-child(6) {
               transform: rotateY(-90deg) translate3d(0, 0, 50px); // ліво
+
+              @include tablet {
+                transform: rotateY(-90deg) translate3d(0, 0, 30px);
+              }
             }
           }
         }
@@ -85,12 +129,20 @@
         flex-direction: column;
         font-size: 30px;
         font-weight: 500;
+
+        @include tablet {
+          font-size: 20px;
+        }
       }
       > div:last-child {
         display: flex;
         flex-direction: column;
         gap: 3px;
         font-weight: 200;
+
+        @include tablet {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -111,9 +163,17 @@
     gap: 35px;
     align-items: center;
 
+    @include tablet {
+      padding: 18px;
+    }
+
     > span:first-child {
       font-weight: 500;
       font-size: 60px;
+
+      @include tablet {
+        font-size: 45px;
+      }
     }
 
     .text {
@@ -126,12 +186,20 @@
         flex-direction: column;
         font-size: 30px;
         font-weight: 500;
+
+        @include tablet {
+          font-size: 20px;
+        }
       }
       > div:last-child {
         display: flex;
         flex-direction: column;
         gap: 3px;
         font-weight: 200;
+
+        @include tablet {
+          font-size: 12px;
+        }
       }
     }
   }

@@ -1,4 +1,6 @@
 @use "./variables" as *;
+@use "./mixins" as *;
+
 .community-section {
   margin: 0 70px 0 70px;
 
@@ -22,6 +24,11 @@
       -moz-box-shadow: 0px -6px 21px 0px rgba(253, 253, 253, 0.3);
       position: relative;
 
+      @include desktop {
+        width: 860px;
+        height: 860px;
+      }
+
       .circle-2 {
         display: flex;
         align-items: center;
@@ -30,6 +37,11 @@
         height: 800px;
         border: 3px solid #894ef67d;
         border-radius: 50%;
+
+        @include desktop {
+          width: 660px;
+          height: 660px;
+        }
 
         .circle-3 {
           display: flex;
@@ -42,6 +54,11 @@
           border: 3px solid #894ef67d;
           border-radius: 50%;
           color: white;
+
+          @include desktop {
+            width: 460px;
+            height: 460px;
+          }
 
           span {
             font-size: 55px;
@@ -151,11 +168,23 @@
           rgba(51, 42, 85, 1) 100%
         );
 
+        @include desktop {
+          width: 200px;
+          height: 55px;
+        }
+
         > div:first-child {
+          display: flex;
+          align-items: center;
           img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
+
+            @include desktop {
+              width: 40px;
+              height: 40px;
+            }
           }
         }
         > div:last-child {
@@ -169,6 +198,10 @@
           }
           > span:nth-child(2) {
             color: rgb(186, 186, 186);
+          }
+
+          @include desktop {
+            font-size: 12px;
           }
         }
       }
