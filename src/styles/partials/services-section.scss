@@ -7,6 +7,10 @@
   display: flex;
   flex-direction: column;
 
+  @include tablet {
+    margin: 100px 70px 20px 70px;
+  }
+
   .text {
     display: flex;
     text-align: center;
@@ -22,6 +26,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+
+    @include tablet {
+      font-size: 40px;
+    }
   }
 
   .back-chess-wrapper {
@@ -29,6 +37,12 @@
     width: 100%;
     height: 100%;
     top: 28%;
+
+    @include tablet {
+      width: 120%;
+      left: -10%;
+    }
+
     .back-chess {
       height: 720px;
       width: 100%;
@@ -77,6 +91,11 @@
     margin-top: 80px;
     overflow: hidden;
 
+    @include tablet {
+      margin-top: 30px;
+      height: 750px;
+    }
+
     .slider-wrapper {
       width: 100%;
       height: 950px;
@@ -84,6 +103,10 @@
       display: flex;
       margin: auto;
       justify-content: center;
+
+      @include tablet {
+        height: 1300px;
+      }
 
       .slider {
         position: absolute;
@@ -98,6 +121,11 @@
           height: 300px;
         }
 
+        @include tablet {
+          width: 240px;
+          height: 290px;
+        }
+
         .card {
           position: absolute;
           inset: 0 0 0 0;
@@ -109,6 +137,10 @@
 
           @include desktop {
             transform: rotateY(var(--rotation)) translateZ(300px);
+          }
+
+          @include tablet {
+            transform: rotateY(var(--rotation)) translateZ(270px);
           }
 
           .card-front {
@@ -133,6 +165,10 @@
               @include desktop {
                 font-size: 20px;
               }
+
+              @include tablet {
+                font-size: 18px;
+              }
             }
             > span:nth-child(2) {
               font-size: 15px;
@@ -143,6 +179,11 @@
 
               @include desktop {
                 font-size: 14px;
+              }
+
+              @include tablet {
+                padding: 0 110px 0 25px;
+                font-size: 12px;
               }
             }
 
@@ -162,6 +203,11 @@
 
               @include desktop {
                 right: -110px;
+              }
+
+              @include tablet {
+                bottom: -60px;
+                right: -130px;
               }
             }
             .art1 {
@@ -341,6 +387,11 @@
         left: 3%;
         cursor: pointer;
 
+        @include tablet {
+          top: 2%;
+          left: 38%;
+        }
+
         div {
           display: flex;
           text-align: center;
@@ -351,6 +402,10 @@
           color: white;
           position: relative;
           z-index: 2;
+
+          @include tablet {
+            font-size: 50px;
+          }
 
           &::before {
             content: "";
@@ -376,6 +431,11 @@
         right: 3%;
         cursor: pointer;
 
+        @include tablet {
+          top: 2%;
+          right: 38%;
+        }
+
         div {
           display: flex;
           text-align: center;
@@ -386,6 +446,10 @@
           color: white;
           position: relative;
           z-index: 2;
+
+          @include tablet {
+            font-size: 50px;
+          }
 
           &::before {
             content: "";
