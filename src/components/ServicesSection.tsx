@@ -13,6 +13,7 @@ export default function ServicesSection() {
     setRotation((prev) => prev - 60);
   };
 
+  //for tablet or mobile screen touch swipe
   const handlers = useSwipeable({
     onSwipedLeft: () => setRotation((r) => r - 60),
     onSwipedRight: () => setRotation((r) => r + 60),

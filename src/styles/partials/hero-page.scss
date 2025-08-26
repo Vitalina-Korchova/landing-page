@@ -12,17 +12,24 @@
       top: 0;
       left: 0;
       width: 100%;
-
       object-fit: cover;
     }
     .shine {
       z-index: 5;
       height: 30vh;
+
+      @include small-tablet {
+        height: 20vh;
+      }
     }
 
     .beams {
       z-index: 5;
       height: 65vh;
+
+      @include small-tablet {
+        height: 55vh;
+      }
     }
 
     .radial-circle {
@@ -40,6 +47,12 @@
       @include tablet {
         top: 190px;
       }
+
+      @include small-tablet {
+        top: 60px;
+        width: 320px;
+        height: 280px;
+      }
     }
 
     .radial-circle-white {
@@ -56,6 +69,11 @@
 
       @include tablet {
         top: 380px;
+      }
+
+      @include small-tablet {
+        top: 270px;
+        width: 200px;
       }
     }
 
@@ -81,6 +99,13 @@
       @include tablet {
         height: 400px;
       }
+
+      @include small-tablet {
+        height: 300px;
+        box-shadow: 0px 8px 17px 5px rgba(115, 5, 255, 0.55);
+        -webkit-box-shadow: 0px 8px 17px 5px rgba(115, 5, 255, 0.55);
+        -moz-box-shadow: 0px 10px 8px 5px rgba(115, 5, 255, 0.55);
+      }
     }
 
     .planet {
@@ -96,6 +121,10 @@
       @include tablet {
         height: 400px;
       }
+
+      @include small-tablet {
+        height: 300px;
+      }
     }
   }
 
@@ -108,6 +137,10 @@
     align-items: center;
     position: relative;
 
+    @include small-tablet {
+      padding: 15px 50px;
+    }
+
     .logo {
       position: absolute;
       display: flex;
@@ -115,6 +148,10 @@
       gap: 8px;
       justify-content: center;
       align-items: center;
+
+      @include small-tablet {
+        position: relative;
+      }
 
       img {
         width: 18px;
@@ -135,6 +172,80 @@
         }
       }
     }
+
+    .nav-link {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      margin: 0 auto;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0px 4px 5px 3px rgba(0, 0, 0, 0.26);
+      -webkit-box-shadow: 0px 4px 5px 3px rgba(0, 0, 0, 0.26);
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.1) 48%,
+          rgba(73, 53, 130, 0.5) 78%,
+          rgba(71, 47, 140, 0.2) 100%
+        );
+        border-radius: 32px;
+        opacity: 70%;
+        pointer-events: none;
+      }
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    .nav-links-items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+
+        li {
+          font-size: 14px;
+          letter-spacing: 0.3px;
+          font-weight: 100;
+          font-family: $font-family-secondary;
+
+          a {
+            display: block;
+            padding: 4px 10px;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+              color: #8a4ef6;
+            }
+          }
+        }
+      }
+    }
+
+    .menu {
+      display: none;
+      position: relative;
+      font-size: 35px;
+      cursor: pointer;
+
+      @include small-tablet {
+        display: flex;
+      }
+    }
   }
 
   hr {
@@ -144,17 +255,96 @@
     border: none;
     background-color: white;
     opacity: 0.3;
+
+    @include small-tablet {
+      margin: 0;
+    }
   }
 
-  .nav-link {
-    position: relative;
-    border-radius: 32px;
-    overflow: hidden;
-    margin: 0 auto;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 5px 3px rgba(0, 0, 0, 0.26);
-    -webkit-box-shadow: 0px 4px 5px 3px rgba(0, 0, 0, 0.26);
+  .side-navbar {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 320px;
+    height: 100%;
+    background-color: $background-color;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .logo-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px 25px 0 25px;
+
+      .logo {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+
+        span {
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+
+      > div:nth-child(2) {
+        display: flex;
+        font-size: 35px;
+        cursor: pointer;
+
+        &:hover {
+          color: #8a4ef6;
+        }
+      }
+    }
+
+    .nav-links-items {
+      display: flex;
+      justify-content: center;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          font-size: 18px;
+          letter-spacing: 0.3px;
+          font-weight: 100;
+          font-family: $font-family-secondary;
+
+          a {
+            display: block;
+            padding: 4px 10px;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+              color: #8a4ef6;
+            }
+          }
+        }
+      }
+    }
 
     &::before {
       content: "";
@@ -169,39 +359,6 @@
       border-radius: 32px;
       opacity: 70%;
       pointer-events: none;
-    }
-  }
-
-  .nav-links-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 5px;
-    margin: 0;
-    padding: 0;
-
-    li {
-      font-size: 14px;
-      letter-spacing: 0.3px;
-      font-weight: 100;
-      font-family: $font-family-secondary;
-
-      a {
-        display: block;
-        padding: 4px 10px;
-        text-decoration: none;
-        cursor: pointer;
-
-        &:hover {
-          color: #ddcbff;
-        }
-      }
     }
   }
 
@@ -227,6 +384,11 @@
       margin: 65px;
     }
 
+    @include small-tablet {
+      font-size: 35px;
+      margin: 55px;
+    }
+
     span {
       font-weight: 300;
     }
@@ -242,6 +404,10 @@
 
     @include tablet {
       margin-top: 0;
+    }
+
+    @include small-tablet {
+      margin-top: -5px;
     }
 
     button {
@@ -261,6 +427,11 @@
       border: 1px solid #ffffff;
       border-radius: 50%;
       cursor: pointer;
+
+      @include small-tablet {
+        font-size: 35px;
+        padding: 18px;
+      }
     }
   }
 
@@ -272,6 +443,10 @@
 
     @include tablet {
       margin: 70px;
+    }
+
+    @include small-tablet {
+      margin: 65px 50px;
     }
 
     &::before {
@@ -316,6 +491,10 @@
 
         @include tablet {
           font-size: 25px;
+        }
+
+        @include small-tablet {
+          font-size: 18px;
         }
       }
     }

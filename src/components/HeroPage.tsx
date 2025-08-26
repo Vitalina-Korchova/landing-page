@@ -10,9 +10,13 @@ import {
 } from "react-icons/fa";
 import { HiOutlineArrowNarrowDown } from "react-icons/hi";
 import { Link } from "react-scroll";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
+import { IoClose, IoMenu } from "react-icons/io5";
+import { useState } from "react";
 
 export default function HeroPage() {
+  const [showNavLinks, setShowNavLinks] = useState(false);
+
   return (
     <>
       <div className="hero-page" id="home">
@@ -60,8 +64,64 @@ export default function HeroPage() {
               </ul>
             </div>
           </div>
+          <div className="menu" onClick={() => setShowNavLinks(true)}>
+            <IoMenu />
+          </div>
         </nav>
         <hr />
+
+        <AnimatePresence>
+          {showNavLinks && (
+            <motion.div
+              key="side-navbar"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="side-navbar"
+            >
+              <div className="logo-btn">
+                <div className="logo">
+                  <img className="logo-icon" src="./logo.svg" alt="" />
+                  <span>SpaceV</span>
+                </div>
+                <div onClick={() => setShowNavLinks(false)}>
+                  <IoClose />
+                </div>
+              </div>
+              <hr />
+              <div className="nav-links-items">
+                <ul>
+                  <li>
+                    <Link to="benefits" smooth={true} duration={1600}>
+                      Benefits
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="services" smooth={true} duration={1600}>
+                      Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="community" smooth={true} duration={1600}>
+                      Community
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="testimonials" smooth={true} duration={1600}>
+                      Testimonials
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="faq" smooth={true} duration={1600}>
+                      FAQ
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <div className="text-main">
           <span>
