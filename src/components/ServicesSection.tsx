@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+import { useSwipeable } from "react-swipeable";
 
 export default function ServicesSection() {
   const [rotation, setRotation] = useState(0);
@@ -11,6 +12,11 @@ export default function ServicesSection() {
   const rotateSliderLeft = () => {
     setRotation((prev) => prev - 60);
   };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setRotation((r) => r - 60),
+    onSwipedRight: () => setRotation((r) => r + 60),
+  });
 
   const arrayDataCard = [
     {
@@ -81,11 +87,14 @@ export default function ServicesSection() {
                 <IoIosArrowRoundBack />
               </div>
             </motion.div>
+
             <div
+              {...handlers}
               className="slider"
               style={{
                 transform: ` rotateX(-16deg) rotateY(${rotation}deg)`,
                 transition: "transform 0.6s ease ",
+                touchAction: "pan-y",
               }}
             >
               {arrayDataCard.map((card, i) => {
