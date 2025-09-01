@@ -11,6 +11,10 @@
     margin: 100px 70px 20px 70px;
   }
 
+  @include small-tablet {
+    margin: 80px 50px 20px 50px;
+  }
+
   .text {
     display: flex;
     text-align: center;
@@ -30,6 +34,10 @@
     @include tablet {
       font-size: 40px;
     }
+
+    @include small-tablet {
+      font-size: 30px;
+    }
   }
 
   .back-chess-wrapper {
@@ -41,6 +49,12 @@
     @include tablet {
       width: 120%;
       left: -10%;
+    }
+
+    @include small-tablet {
+      width: 160%;
+      left: -30%;
+      top: 14%;
     }
 
     .back-chess {
@@ -96,6 +110,11 @@
       height: 750px;
     }
 
+    @include small-tablet {
+      margin-top: 10px;
+      height: 750px;
+    }
+
     .slider-wrapper {
       width: 100%;
       height: 950px;
@@ -126,6 +145,11 @@
           height: 290px;
         }
 
+        @include small-tablet {
+          width: 140px;
+          height: 220px;
+        }
+
         .card {
           position: absolute;
           inset: 0 0 0 0;
@@ -141,6 +165,10 @@
 
           @include tablet {
             transform: rotateY(var(--rotation)) translateZ(270px);
+          }
+
+          @include small-tablet {
+            transform: rotateY(var(--rotation)) translateZ(160px);
           }
 
           .card-front {
@@ -391,6 +419,10 @@
           display: none;
         }
 
+        @include small-tablet {
+          display: none;
+        }
+
         div {
           display: flex;
           text-align: center;
@@ -431,6 +463,10 @@
         cursor: pointer;
 
         @include tablet {
+          display: none;
+        }
+
+        @include small-tablet {
           display: none;
         }
 

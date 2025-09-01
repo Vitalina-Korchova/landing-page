@@ -8,6 +8,11 @@
   gap: 120px;
   position: relative;
 
+  @include small-tablet {
+    margin: 70px 50px;
+    gap: 70px;
+  }
+
   .text-section-main {
     display: flex;
     text-align: center;
@@ -26,6 +31,10 @@
     @include tablet {
       font-size: 40px;
     }
+
+    @include small-tablet {
+      font-size: 30px;
+    }
   }
 
   .block-section {
@@ -33,6 +42,10 @@
     background-color: transparent;
     height: 720px;
     position: relative;
+
+    @include small-tablet {
+      display: none;
+    }
 
     .block-lines {
       width: 76%;
@@ -104,7 +117,7 @@
       justify-content: space-between;
 
       .block-card-inner {
-        width: 24%;
+        width: 23%;
         height: fit-content;
         background-color: #ffffff11;
         border-radius: 24px;
@@ -216,7 +229,7 @@
             width: 30px;
             z-index: 2;
             position: absolute;
-            left: -30px;
+            left: -31px;
             border: 1px solid white;
 
             @include tablet {
@@ -242,7 +255,7 @@
             width: 30px;
             z-index: 2;
             position: absolute;
-            right: -30px;
+            right: -31px;
             border: 1px solid white;
 
             @include tablet {
@@ -361,6 +374,131 @@
       }
     }
   }
+
+  .block-section-mobile {
+    display: none;
+
+    @include small-tablet {
+      display: block;
+    }
+
+    .block-core {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      flex-direction: column;
+
+      .circle-center-main {
+        width: 35px;
+        height: 35px;
+        background: #8547f6;
+        background: linear-gradient(
+          180deg,
+          rgba(133, 71, 246, 1) 0%,
+          rgba(188, 152, 255, 1) 100%
+        );
+        font-size: 30px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 3;
+        border: 1px solid white;
+        margin: auto;
+      }
+
+      .line {
+        width: 1px;
+        background-color: white;
+        height: 120px;
+        display: flex;
+        margin: auto;
+      }
+
+      .block-develop,
+      .block-technologies,
+      .block-goals {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+
+        .card {
+          width: 70%;
+          height: fit-content;
+          background-color: #ffffff11;
+          border-radius: 24px;
+          border: 1px solid #ffffff28;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          padding: 8px;
+          position: relative;
+          z-index: 3;
+
+          &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: conic-gradient(
+              from 202deg at 50% 50%,
+              rgba(0, 0, 0, 0) 67%,
+              rgba(73, 53, 130, 1) 76%,
+              rgba(71, 47, 140, 0.28) 92%
+            );
+            opacity: 20%;
+            border-radius: 24px;
+            pointer-events: none;
+            filter: blur(5px);
+          }
+
+          .stars {
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+          }
+
+          > span:nth-child(3) {
+            font-size: 25px;
+            text-align: center;
+            padding: 0 18px;
+          }
+          > span:nth-child(4) {
+            font-size: 15px;
+            text-align: center;
+            font-family: $font-family-secondary;
+            padding: 4px 18px 12px 18px;
+            font-weight: 100;
+          }
+
+          .circle-develop,
+          .circle-technologies,
+          .circle-goals {
+            background: #8547f6;
+            background: linear-gradient(
+              180deg,
+              rgba(133, 71, 246, 1) 0%,
+              rgba(188, 152, 255, 1) 100%
+            );
+            font-size: 20px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            border: 1px solid white;
+            position: absolute;
+            top: -30px;
+            left: 40%;
+          }
+        }
+      }
+    }
+  }
   .oval-left-shadow {
     position: absolute;
     top: 0;
@@ -372,6 +510,11 @@
     border-radius: 50%;
     filter: blur(60px);
     z-index: 1;
+
+    @include small-tablet {
+      width: 220px;
+      left: -150px;
+    }
   }
 
   .oval-right-shadow {
@@ -385,8 +528,10 @@
     border-radius: 50%;
     filter: blur(60px);
     z-index: 1;
-  }
-}
 
-@media (min-width: 1025px) and (max-width: 1439px) {
+    @include small-tablet {
+      width: 220px;
+      right: -150px;
+    }
+  }
 }
