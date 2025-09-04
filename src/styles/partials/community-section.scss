@@ -42,8 +42,8 @@
       }
 
       @include small-tablet {
-        width: 420px;
-        height: 420px;
+        width: 460px;
+        height: 460px;
         border: 1px solid #af04ff;
       }
 
@@ -67,8 +67,8 @@
         }
 
         @include small-tablet {
-          width: 300px;
-          height: 300px;
+          width: 340px;
+          height: 340px;
         }
 
         .circle-3 {
@@ -94,8 +94,8 @@
           }
 
           @include small-tablet {
-            width: 190px;
-            height: 190px;
+            width: 230px;
+            height: 230px;
           }
 
           span {
@@ -107,7 +107,7 @@
             }
 
             @include small-tablet {
-              font-size: 22px;
+              font-size: 30px;
             }
           }
 
@@ -129,8 +129,8 @@
             }
 
             @include small-tablet {
-              font-size: 12px;
-              padding: 10px 25px;
+              font-size: 15px;
+              padding: 12px 28px;
               margin-top: 15px;
             }
           }
@@ -247,7 +247,7 @@
           left: 15%;
 
           @include small-tablet {
-            top: 66%;
+            top: 36%;
             left: 13%;
           }
           > div:nth-child(1),
@@ -286,8 +286,8 @@
         }
 
         @include small-tablet {
-          width: 140px;
-          height: 40px;
+          width: 160px;
+          height: 50px;
           padding: 2px 10px;
         }
 
@@ -310,8 +310,8 @@
             }
 
             @include small-tablet {
-              width: 30px;
-              height: 30px;
+              width: 35px;
+              height: 35px;
             }
           }
         }
@@ -337,7 +337,7 @@
           }
 
           @include small-tablet {
-            font-size: 9px;
+            font-size: 11px;
           }
         }
       }
@@ -353,8 +353,8 @@
         }
 
         @include small-tablet {
-          top: 60px;
-          left: 55px;
+          top: 50px;
+          left: 35px;
         }
       }
       .comment-2 {
@@ -367,8 +367,8 @@
           left: 8px;
         }
         @include small-tablet {
-          top: 200px;
-          left: -15px;
+          top: 290px;
+          left: 0px;
         }
       }
       .comment-3 {
@@ -382,7 +382,7 @@
         }
 
         @include small-tablet {
-          top: 120px;
+          top: 110px;
           left: 260px;
         }
       }
@@ -396,7 +396,7 @@
           left: 380px;
         }
         @include small-tablet {
-          top: 285px;
+          top: 310px;
           left: 260px;
         }
       }
