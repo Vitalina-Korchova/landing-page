@@ -3,12 +3,19 @@
 
 .community-section {
   margin: 0 70px 0 70px;
-
   position: relative;
+
+  @include small-tablet {
+    margin: 0;
+  }
 
   .circles {
     padding: 5px;
     position: relative;
+
+    @include small-tablet {
+      padding: 0;
+    }
 
     .circle-1 {
       display: flex;
@@ -34,6 +41,12 @@
         height: 600px;
       }
 
+      @include small-tablet {
+        width: 420px;
+        height: 420px;
+        border: 1px solid #af04ff;
+      }
+
       .circle-2 {
         display: flex;
         align-items: center;
@@ -51,6 +64,11 @@
         @include tablet {
           width: 400px;
           height: 400px;
+        }
+
+        @include small-tablet {
+          width: 300px;
+          height: 300px;
         }
 
         .circle-3 {
@@ -75,12 +93,21 @@
             height: 200px;
           }
 
+          @include small-tablet {
+            width: 190px;
+            height: 190px;
+          }
+
           span {
             font-size: 55px;
             font-weight: 500;
 
             @include tablet {
               font-size: 24px;
+            }
+
+            @include small-tablet {
+              font-size: 22px;
             }
           }
 
@@ -96,6 +123,12 @@
             font-family: $font-family-main;
 
             @include tablet {
+              font-size: 12px;
+              padding: 10px 25px;
+              margin-top: 15px;
+            }
+
+            @include small-tablet {
               font-size: 12px;
               padding: 10px 25px;
               margin-top: 15px;
@@ -122,6 +155,10 @@
         @include tablet {
           height: 200px;
         }
+
+        @include small-tablet {
+          height: 120px;
+        }
       }
 
       .differenet-elements {
@@ -140,12 +177,22 @@
               width: 30px;
               height: 30px;
             }
+
+            @include small-tablet {
+              width: 24px;
+              height: 24px;
+            }
           }
           > div:last-child {
             border-radius: 50%;
             background-color: white;
             width: 10px;
             height: 10px;
+
+            @include small-tablet {
+              width: 8px;
+              height: 8px;
+            }
           }
         }
 
@@ -153,6 +200,10 @@
           position: absolute;
           top: 1%;
           left: 30%;
+
+          @include small-tablet {
+            left: 25%;
+          }
         }
 
         .blob-el-2 {
@@ -162,6 +213,10 @@
 
           @include tablet {
             top: 20%;
+          }
+          @include small-tablet {
+            top: 15%;
+            left: 77%;
           }
 
           > div:nth-child(1),
@@ -177,6 +232,10 @@
           @include tablet {
             top: 48%;
           }
+          @include small-tablet {
+            top: 46%;
+            left: 83%;
+          }
           > div:nth-child(1),
           > div:nth-child(2) {
             background-color: rgba(255, 255, 255, 0.511);
@@ -186,6 +245,11 @@
           position: absolute;
           top: 65%;
           left: 15%;
+
+          @include small-tablet {
+            top: 66%;
+            left: 13%;
+          }
           > div:nth-child(1),
           > div:nth-child(2) {
             background-color: rgba(255, 255, 255, 0.203);
@@ -221,6 +285,12 @@
           height: 50px;
         }
 
+        @include small-tablet {
+          width: 140px;
+          height: 40px;
+          padding: 2px 10px;
+        }
+
         > div:first-child {
           display: flex;
           align-items: center;
@@ -235,6 +305,11 @@
             }
 
             @include tablet {
+              width: 30px;
+              height: 30px;
+            }
+
+            @include small-tablet {
               width: 30px;
               height: 30px;
             }
@@ -260,6 +335,10 @@
           @include tablet {
             font-size: 10px;
           }
+
+          @include small-tablet {
+            font-size: 9px;
+          }
         }
       }
 
@@ -272,6 +351,11 @@
           top: 90px;
           left: 100px;
         }
+
+        @include small-tablet {
+          top: 60px;
+          left: 55px;
+        }
       }
       .comment-2 {
         position: absolute;
@@ -281,6 +365,10 @@
         @include tablet {
           top: 300px;
           left: 8px;
+        }
+        @include small-tablet {
+          top: 200px;
+          left: -15px;
         }
       }
       .comment-3 {
@@ -292,6 +380,11 @@
           top: 180px;
           left: 370px;
         }
+
+        @include small-tablet {
+          top: 120px;
+          left: 260px;
+        }
       }
       .comment-4 {
         position: absolute;
@@ -301,6 +394,10 @@
         @include tablet {
           top: 380px;
           left: 380px;
+        }
+        @include small-tablet {
+          top: 285px;
+          left: 260px;
         }
       }
     }

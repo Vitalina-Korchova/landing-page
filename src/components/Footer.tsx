@@ -51,6 +51,7 @@ export default function Footer() {
               </span>
             </div>
           </div>
+
           <div>
             <div>
               <span>Join the SpaceV</span>

@@ -11,6 +11,10 @@
     margin: 20px 70px;
   }
 
+  @include small-tablet {
+    margin: 10px 50px;
+  }
+
   .text {
     display: flex;
     text-align: center;
@@ -30,6 +34,10 @@
     @include tablet {
       font-size: 40px;
     }
+
+    @include small-tablet {
+      font-size: 30px;
+    }
   }
 
   .accordion-wrapper {
@@ -45,6 +53,7 @@
         margin-bottom: 10px;
         border-radius: 24px;
         position: relative;
+        overflow: hidden;
 
         &::after {
           border-top-right-radius: 24px;
@@ -65,6 +74,10 @@
 
           @include tablet {
             width: 50%;
+          }
+
+          @include small-tablet {
+            width: 96%;
           }
         }
 
@@ -90,6 +103,11 @@
             padding: 25px;
             font-size: 20px;
           }
+
+          @include small-tablet {
+            padding: 22px 25px 22px 25px;
+            font-size: 15px;
+          }
         }
 
         &-content {
@@ -104,6 +122,25 @@
             font-size: 14px;
             padding: 0 20px 10px 10px;
           }
+
+          @include small-tablet {
+            font-size: 13px;
+            padding: 0 20px 10px 10px;
+          }
+        }
+
+        .star-down {
+          margin-left: auto;
+          margin-right: 10px;
+          font-size: 25px;
+          min-width: 25px;
+          min-height: 25px;
+
+          @include small-tablet {
+            font-size: 18px;
+            min-width: 18px;
+            min-height: 18px;
+          }
         }
 
         &-panel {
@@ -117,9 +154,9 @@
         &--expanded {
           .szh-accordion__item-btn {
             border-top: 1px solid #ffffff6f;
-
             border-radius: 24px;
           }
+
           .star-down {
             transform: rotate(180deg);
           }
