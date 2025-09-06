@@ -1,69 +1,32 @@
-# React + TypeScript + Vite
+# SpaceV
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SpaceV** is a modern and visually stunning landing page about the SpaceV company.  
+The project showcases a clean design enriched with animations, 3D perspectives, and smooth transitions to create an engaging user experience.  
 
-Currently, two official plugins are available:
+## 🌐 Demo
+Check out the live demo here: [SpaceV on GitHub Pages](https://your-username.github.io/your-repo-name/)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- Beautiful animations and smooth motion effects  
+- 3D perspective elements for an immersive look  
+- Responsive design for all devices  
+- Interactive navigation and sections  
+- Scrolling text with marquee effect  
+- Swipeable elements for better mobile UX  
+- Built with modern web technologies  
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- **React** – UI library  
+- **Sass (SCSS)** – styling and responsive design  
+- **Swiper** – interactive sliders  
+- **Framer Motion** – animations and transitions  
+- **AOS (Animate on Scroll)** – scroll-based animations  
+- **react-fast-marquee** – marquee  
+- **react-swipeable** – swipe support for touch devices  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+npm install
