@@ -4,7 +4,7 @@
 The project showcases a clean design enriched with animations, 3D perspectives, and smooth transitions to create an engaging user experience.  
 
 ## 🌐 Demo
-Check out the live demo here: [SpaceV on GitHub Pages](https://your-username.github.io/your-repo-name/)  
+Check out the live demo here: [SpaceV on GitHub Pages]([https://your-username.github.io/your-repo-name/](https://vitalina-korchova.github.io/space-v-landing-page/))  
 
 ## ✨ Features
 - Beautiful animations and smooth motion effects  
@@ -27,6 +27,4 @@ Check out the live demo here: [SpaceV on GitHub Pages](https://your-username.git
 
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-npm install
+
