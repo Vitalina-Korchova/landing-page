@@ -469,6 +469,7 @@
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    -webkit-tap-highlight-color: transparent;
 
     @include tablet {
       margin-top: 0;

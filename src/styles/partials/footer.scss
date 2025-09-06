@@ -231,6 +231,7 @@
           background: linear-gradient(0deg, #47308c, #140f2a, #47308c66);
           color: white;
           font-family: $font-family-main;
+          -webkit-tap-highlight-color: transparent;
 
           @include tablet {
             width: 100px;

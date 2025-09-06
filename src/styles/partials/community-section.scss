@@ -154,6 +154,7 @@
             border: 1px solid #77679f;
             color: white;
             font-family: $font-family-main;
+            -webkit-tap-highlight-color: transparent;
 
             @include tablet {
               font-size: 12px;

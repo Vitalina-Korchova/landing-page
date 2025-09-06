@@ -110,6 +110,7 @@
           border: none;
           font-family: $font-family-main;
           word-spacing: 5px;
+          -webkit-tap-highlight-color: transparent;
 
           @include tablet {
             padding: 25px;
