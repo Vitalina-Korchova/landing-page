@@ -22,6 +22,14 @@
       gap: 40px;
     }
 
+    @include mobile {
+      height: 340px;
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: center;
+      gap: 40px;
+    }
+
     > div:nth-child(1) {
       margin-left: 70px;
       display: flex;
@@ -30,6 +38,10 @@
       align-items: start;
 
       @include small-tablet {
+        margin-left: 0;
+        grid-column: 1;
+      }
+      @include mobile {
         margin-left: 0;
         grid-column: 1;
       }
@@ -49,6 +61,11 @@
             width: 18px;
             height: 18px;
           }
+
+          @include mobile {
+            width: 16px;
+            height: 16px;
+          }
         }
 
         span {
@@ -57,6 +74,10 @@
 
           @include tablet {
             font-size: 18px;
+          }
+
+          @include mobile {
+            font-size: 16px;
           }
         }
       }
@@ -74,6 +95,11 @@
             font-size: 12px;
             width: 140px;
           }
+
+          @include mobile {
+            font-size: 11px;
+            width: 130px;
+          }
         }
       }
     }
@@ -84,6 +110,10 @@
       gap: 14px;
 
       @include small-tablet {
+        grid-column: 2;
+      }
+
+      @include mobile {
         grid-column: 2;
       }
 
@@ -99,6 +129,11 @@
         font-size: 13px;
         font-family: $font-family-secondary;
         color: gray;
+
+        @include mobile {
+          font-size: 12px;
+          gap: 8px;
+        }
 
         span {
           cursor: pointer;
@@ -122,6 +157,12 @@
         margin-top: 40px;
       }
 
+      @include mobile {
+        margin-right: 0;
+        grid-column: 1 / -1;
+        margin-top: 10px;
+      }
+
       > div:nth-child(1) {
         display: flex;
         flex-direction: column;
@@ -139,6 +180,10 @@
         @include tablet {
           font-size: 24px;
         }
+
+        @include mobile {
+          font-size: 20px;
+        }
       }
 
       > div:nth-child(2) {
@@ -155,6 +200,12 @@
 
           @include tablet {
             width: 250px;
+            padding: 12px;
+            font-size: 12px;
+          }
+
+          @include mobile {
+            width: 230px;
             padding: 12px;
             font-size: 12px;
           }
@@ -185,6 +236,11 @@
             width: 100px;
             font-size: 12px;
           }
+
+          @include mobile {
+            width: 70px;
+            font-size: 11px;
+          }
         }
       }
 
@@ -204,6 +260,9 @@
 
           @include tablet {
             font-size: 16px;
+          }
+          @include mobile {
+            font-size: 15px;
           }
         }
       }
@@ -236,6 +295,11 @@
       height: 60%;
       bottom: -20%;
     }
+
+    @include mobile {
+      height: 60%;
+      bottom: -20%;
+    }
   }
 
   .white-blur-circle {
@@ -248,7 +312,11 @@
     position: absolute;
     border-radius: 50%;
     filter: blur(25px);
+
     @include small-tablet {
+      bottom: -4%;
+    }
+    @include mobile {
       bottom: -4%;
     }
   }

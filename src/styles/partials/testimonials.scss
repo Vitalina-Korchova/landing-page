@@ -12,6 +12,11 @@
     gap: 0px;
   }
 
+  @include mobile {
+    margin: 15px 0;
+    gap: 0px;
+  }
+
   .text {
     display: flex;
     flex-direction: column;
@@ -37,6 +42,10 @@
     @include small-tablet {
       font-size: 30px;
     }
+
+    @include mobile {
+      font-size: 25px;
+    }
   }
 
   .map {
@@ -51,6 +60,10 @@
       height: 450px;
     }
 
+    @include mobile {
+      height: 320px;
+    }
+
     .slider-wrapper {
       width: 100%;
       height: 500px;
@@ -60,11 +73,18 @@
         height: 320px;
       }
 
+      @include mobile {
+        height: 320px;
+      }
+
       .swiper {
         width: 100%;
         height: 80%;
 
         @include small-tablet {
+          padding-bottom: 15px;
+        }
+        @include mobile {
           padding-bottom: 15px;
         }
       }
@@ -87,6 +107,9 @@
 
         @include small-tablet {
           width: 50%;
+        }
+        @include mobile {
+          width: 70%;
         }
 
         &::before {
@@ -118,6 +141,9 @@
           @include small-tablet {
             gap: 10px;
           }
+          @include mobile {
+            gap: 10px;
+          }
 
           > span:nth-child(1) {
             font-size: 30px;
@@ -127,6 +153,9 @@
               font-size: 20px;
             }
             @include small-tablet {
+              font-size: 15px;
+            }
+            @include mobile {
               font-size: 15px;
             }
           }
@@ -139,6 +168,9 @@
             }
 
             @include small-tablet {
+              font-size: 8px;
+            }
+            @include mobile {
               font-size: 8px;
             }
           }
@@ -160,7 +192,12 @@
               width: 150px;
               height: 1px;
             }
+            @include mobile {
+              width: 150px;
+              height: 1px;
+            }
           }
+
           > span:nth-child(4) {
             font-size: 22px;
             font-weight: 500;
@@ -170,6 +207,9 @@
             }
 
             @include small-tablet {
+              font-size: 13px;
+            }
+            @include mobile {
               font-size: 13px;
             }
           }
@@ -195,6 +235,10 @@
           width: 18px;
           height: 4px;
         }
+        @include mobile {
+          width: 18px;
+          height: 4px;
+        }
       }
 
       .swiper-pagination-bullet-active {
@@ -203,6 +247,10 @@
         width: 40px;
 
         @include small-tablet {
+          width: 30px;
+          height: 4px;
+        }
+        @include mobile {
           width: 30px;
           height: 4px;
         }
@@ -229,6 +277,9 @@
         @include small-tablet {
           display: none;
         }
+        @include mobile {
+          display: none;
+        }
       }
     }
 
@@ -249,6 +300,10 @@
         bottom: 15px;
       }
       @include small-tablet {
+        height: 150px;
+        bottom: 20px;
+      }
+      @include mobile {
         height: 150px;
         bottom: 20px;
       }

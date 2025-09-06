@@ -13,6 +13,11 @@
     gap: 70px;
   }
 
+  @include mobile {
+    margin: 50px 20px;
+    gap: 50px;
+  }
+
   .text-section-main {
     display: flex;
     text-align: center;
@@ -35,6 +40,10 @@
     @include small-tablet {
       font-size: 30px;
     }
+
+    @include mobile {
+      font-size: 25px;
+    }
   }
 
   .block-section {
@@ -44,6 +53,9 @@
     position: relative;
 
     @include small-tablet {
+      display: none;
+    }
+    @include mobile {
       display: none;
     }
 
@@ -381,6 +393,9 @@
     @include small-tablet {
       display: block;
     }
+    @include mobile {
+      display: block;
+    }
 
     .block-core {
       width: 100%;
@@ -408,6 +423,12 @@
         z-index: 3;
         border: 1px solid white;
         margin: auto;
+
+        @include mobile {
+          width: 25px;
+          height: 25px;
+          font-size: 25px;
+        }
       }
 
       .line {
@@ -416,6 +437,10 @@
         height: 120px;
         display: flex;
         margin: auto;
+
+        @include mobile {
+          height: 100px;
+        }
       }
 
       .block-develop,
@@ -438,6 +463,11 @@
           position: relative;
           z-index: 3;
 
+          @include mobile {
+            padding: 4px;
+            width: 235px;
+          }
+
           &::before {
             content: "";
             position: absolute;
@@ -458,12 +488,19 @@
             padding: 20px 30px;
             display: flex;
             justify-content: space-between;
+
+            @include mobile {
+              padding: 15px 25px;
+            }
           }
 
           > span:nth-child(3) {
             font-size: 25px;
             text-align: center;
             padding: 0 18px;
+            @include mobile {
+              font-size: 20px;
+            }
           }
           > span:nth-child(4) {
             font-size: 15px;
@@ -471,6 +508,9 @@
             font-family: $font-family-secondary;
             padding: 4px 18px 12px 18px;
             font-weight: 100;
+            @include mobile {
+              font-size: 13px;
+            }
           }
 
           .circle-develop,
@@ -494,6 +534,11 @@
             position: absolute;
             top: -30px;
             left: 40.5%;
+
+            @include mobile {
+              font-size: 16px;
+              padding: 8px;
+            }
           }
         }
       }
@@ -515,6 +560,10 @@
       width: 220px;
       left: -150px;
     }
+    @include mobile {
+      width: 220px;
+      left: -150px;
+    }
   }
 
   .oval-right-shadow {
@@ -530,6 +579,10 @@
     z-index: 1;
 
     @include small-tablet {
+      width: 220px;
+      right: -150px;
+    }
+    @include mobile {
       width: 220px;
       right: -150px;
     }

@@ -15,6 +15,10 @@
     margin: 80px 0 20px 0;
   }
 
+  @include mobile {
+    margin: 50px 0 20px 0;
+  }
+
   .text {
     display: flex;
     text-align: center;
@@ -38,6 +42,11 @@
     @include small-tablet {
       font-size: 30px;
     }
+
+    @include mobile {
+      font-size: 25px;
+      margin: 0 20px 0 20px;
+    }
   }
 
   .back-chess-wrapper {
@@ -55,6 +64,12 @@
       width: 160%;
       left: -30%;
       top: 2%;
+    }
+
+    @include mobile {
+      width: 160%;
+      left: -30%;
+      top: -15%;
     }
 
     .back-chess {
@@ -115,6 +130,11 @@
       height: 550px;
     }
 
+    @include mobile {
+      margin-top: 10px;
+      height: 450px;
+    }
+
     .slider-wrapper {
       width: 100%;
       height: 950px;
@@ -129,6 +149,9 @@
 
       @include small-tablet {
         height: 650px;
+      }
+      @include mobile {
+        height: 450px;
       }
 
       .slider {
@@ -155,6 +178,12 @@
           transform: perspective(1000px) rotateX(-16deg);
         }
 
+        @include mobile {
+          width: 120px;
+          height: 200px;
+          transform: perspective(1000px) rotateX(-16deg);
+        }
+
         .card {
           position: absolute;
           inset: 0 0 0 0;
@@ -174,6 +203,16 @@
 
           @include small-tablet {
             transform: rotateY(var(--rotation)) translateZ(190px);
+            box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.4),
+              0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+            -webkit-box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.4),
+              0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.4),
+              0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+          }
+
+          @include mobile {
+            transform: rotateY(var(--rotation)) translateZ(130px);
             box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.4),
               0px 1px 4px 0px rgba(0, 0, 0, 0.2);
             -webkit-box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.4),
@@ -213,7 +252,13 @@
                 font-size: 18px;
                 padding: 15px 20px;
               }
+
+              @include mobile {
+                font-size: 14px;
+                padding: 10px;
+              }
             }
+
             > span:nth-child(2) {
               font-size: 15px;
               font-weight: 500;
@@ -232,6 +277,10 @@
               @include small-tablet {
                 padding: 0 50px 0 25px;
                 font-size: 12px;
+              }
+              @include mobile {
+                padding: 0 15px 0 10px;
+                font-size: 10px;
               }
             }
 
@@ -260,6 +309,12 @@
               @include small-tablet {
                 width: 160px;
                 height: 180px;
+                right: -70px;
+              }
+
+              @include mobile {
+                width: 120px;
+                height: 130px;
                 right: -70px;
               }
             }
@@ -448,6 +503,10 @@
           display: none;
         }
 
+        @include mobile {
+          display: none;
+        }
+
         div {
           display: flex;
           text-align: center;
@@ -492,6 +551,10 @@
         }
 
         @include small-tablet {
+          display: none;
+        }
+
+        @include mobile {
           display: none;
         }
 

@@ -21,6 +21,10 @@
       @include small-tablet {
         height: 20vh;
       }
+
+      @include mobile {
+        height: 20vh;
+      }
     }
 
     .beams {
@@ -28,6 +32,10 @@
       height: 65vh;
 
       @include small-tablet {
+        height: 55vh;
+      }
+
+      @include mobile {
         height: 55vh;
       }
     }
@@ -53,6 +61,11 @@
         width: 320px;
         height: 280px;
       }
+      @include mobile {
+        top: 20px;
+        width: 300px;
+        height: 180px;
+      }
     }
 
     .radial-circle-white {
@@ -74,6 +87,10 @@
       @include small-tablet {
         top: 270px;
         width: 200px;
+      }
+      @include mobile {
+        top: 160px;
+        width: 150px;
       }
     }
 
@@ -106,6 +123,12 @@
         -webkit-box-shadow: 0px 8px 17px 5px rgba(115, 5, 255, 0.55);
         -moz-box-shadow: 0px 10px 8px 5px rgba(115, 5, 255, 0.55);
       }
+      @include mobile {
+        height: 200px;
+        box-shadow: 0px 8px 17px 5px rgba(115, 5, 255, 0.55);
+        -webkit-box-shadow: 0px 8px 17px 5px rgba(115, 5, 255, 0.55);
+        -moz-box-shadow: 0px 10px 8px 5px rgba(115, 5, 255, 0.55);
+      }
     }
 
     .planet {
@@ -125,6 +148,9 @@
       @include small-tablet {
         height: 300px;
       }
+      @include mobile {
+        height: 200px;
+      }
     }
   }
 
@@ -140,6 +166,9 @@
     @include small-tablet {
       padding: 15px 50px;
     }
+    @include mobile {
+      padding: 13px 20px;
+    }
 
     .logo {
       position: absolute;
@@ -152,12 +181,19 @@
       @include small-tablet {
         position: relative;
       }
+      @include mobile {
+        position: relative;
+      }
 
       img {
         width: 18px;
         height: 18px;
 
         @include tablet {
+          width: 16px;
+          height: 16px;
+        }
+        @include mobile {
           width: 16px;
           height: 16px;
         }
@@ -168,6 +204,9 @@
         font-weight: 500;
 
         @include tablet {
+          font-size: 18px;
+        }
+        @include mobile {
           font-size: 18px;
         }
       }
@@ -199,6 +238,10 @@
       }
 
       @include small-tablet {
+        display: none;
+      }
+
+      @include mobile {
         display: none;
       }
     }
@@ -245,6 +288,10 @@
       @include small-tablet {
         display: flex;
       }
+      @include mobile {
+        display: flex;
+        font-size: 30px;
+      }
     }
   }
 
@@ -257,6 +304,9 @@
     opacity: 0.3;
 
     @include small-tablet {
+      margin: 0;
+    }
+    @include mobile {
       margin: 0;
     }
   }
@@ -275,12 +325,19 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include mobile {
+      width: 300px;
+    }
 
     .logo-btn {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       padding: 20px 25px 0 25px;
+
+      @include mobile {
+        padding: 20px 30px 0 30px;
+      }
 
       .logo {
         position: relative;
@@ -309,6 +366,9 @@
         &:hover {
           color: #8a4ef6;
         }
+        @include mobile {
+          font-size: 30px;
+        }
       }
     }
 
@@ -331,6 +391,9 @@
           letter-spacing: 0.3px;
           font-weight: 100;
           font-family: $font-family-secondary;
+          @include mobile {
+            font-size: 16px;
+          }
 
           a {
             display: block;
@@ -389,6 +452,11 @@
       margin: 55px;
     }
 
+    @include mobile {
+      font-size: 25px;
+      margin: 28px 30px;
+    }
+
     span {
       font-weight: 300;
     }
@@ -408,6 +476,10 @@
 
     @include small-tablet {
       margin-top: -5px;
+    }
+
+    @include mobile {
+      margin-top: 0;
     }
 
     button {
@@ -432,6 +504,11 @@
         font-size: 35px;
         padding: 18px;
       }
+
+      @include mobile {
+        font-size: 26px;
+        padding: 15px;
+      }
     }
   }
 
@@ -447,6 +524,10 @@
 
     @include small-tablet {
       margin: 65px 50px;
+    }
+
+    @include mobile {
+      margin: 40px 20px;
     }
 
     &::before {
@@ -495,6 +576,10 @@
 
         @include small-tablet {
           font-size: 18px;
+        }
+
+        @include mobile {
+          font-size: 14px;
         }
       }
     }
