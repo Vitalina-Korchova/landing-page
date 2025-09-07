@@ -23,8 +23,3 @@ Check out the live demo here: [SpaceV on GitHub Pages](https://vitalina-korchova
 - **AOS (Animate on Scroll)** – scroll-based animations  
 - **react-fast-marquee** – marquee  
 - **react-swipeable** – swipe support for touch devices  
-
-
-
-```bash
-
