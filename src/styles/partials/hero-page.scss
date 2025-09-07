@@ -284,7 +284,10 @@
       position: relative;
       font-size: 35px;
       cursor: pointer;
-
+      -webkit-tap-highlight-color: transparent;
+      &:hover {
+        color: #8a4ef6;
+      }
       @include small-tablet {
         display: flex;
       }
@@ -362,6 +365,7 @@
         display: flex;
         font-size: 35px;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
 
         &:hover {
           color: #8a4ef6;
@@ -400,6 +404,7 @@
             padding: 4px 10px;
             text-decoration: none;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
 
             &:hover {
               color: #8a4ef6;

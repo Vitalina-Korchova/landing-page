@@ -12,10 +12,32 @@ import { HiOutlineArrowNarrowDown } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { AnimatePresence, motion } from "motion/react";
 import { IoClose, IoMenu } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function HeroPage() {
   const [showNavLinks, setShowNavLinks] = useState(false);
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
+        setShowNavLinks(false);
+      }
+    }
+
+    if (showNavLinks) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showNavLinks]);
 
   return (
     <>
@@ -74,6 +96,7 @@ export default function HeroPage() {
           {showNavLinks && (
             <motion.div
               key="side-navbar"
+              ref={sidebarRef}
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -93,27 +116,52 @@ export default function HeroPage() {
               <div className="nav-links-items">
                 <ul>
                   <li>
-                    <Link to="benefits" smooth={true} duration={1600}>
+                    <Link
+                      to="benefits"
+                      smooth={true}
+                      duration={1600}
+                      onClick={() => setShowNavLinks(false)}
+                    >
                       Benefits
                     </Link>
                   </li>
                   <li>
-                    <Link to="services" smooth={true} duration={1600}>
+                    <Link
+                      to="services"
+                      smooth={true}
+                      duration={1600}
+                      onClick={() => setShowNavLinks(false)}
+                    >
                       Services
                     </Link>
                   </li>
                   <li>
-                    <Link to="community" smooth={true} duration={1600}>
+                    <Link
+                      to="community"
+                      smooth={true}
+                      duration={1600}
+                      onClick={() => setShowNavLinks(false)}
+                    >
                       Community
                     </Link>
                   </li>
                   <li>
-                    <Link to="testimonials" smooth={true} duration={1600}>
+                    <Link
+                      to="testimonials"
+                      smooth={true}
+                      duration={1600}
+                      onClick={() => setShowNavLinks(false)}
+                    >
                       Testimonials
                     </Link>
                   </li>
                   <li>
-                    <Link to="faq" smooth={true} duration={1600}>
+                    <Link
+                      to="faq"
+                      smooth={true}
+                      duration={1600}
+                      onClick={() => setShowNavLinks(false)}
+                    >
                       FAQ
                     </Link>
                   </li>

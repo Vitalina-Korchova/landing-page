@@ -137,7 +137,7 @@
 
         span {
           cursor: pointer;
-
+          -webkit-tap-highlight-color: transparent;
           &:hover {
             color: #8a4ef6;
           }
